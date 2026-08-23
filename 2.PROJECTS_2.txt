@@ -1,0 +1,56 @@
+"Fixing STDF Parser for Spotfire & Native"
+Before: Spotfire struggled with giant raw CSVs/Excel sheets, and your native Python app choked on long-table dictionaries (records.append({...})).
+
+After (Parquet): Spotfire natively handles .parquet files incredibly fast because Spotfire is an in-memory columnar tool. By feeding Spotfire and your native app the same Parquet cache, both tools get a massive speed boost.
+
+"To Hover ECID on any plots"
+The Big Time Saver: To hover over a plot and instantly see an ECID (or chip coordinate), your application needs to query the data in milliseconds.
+
+With Polars + Parquet, when a user hovers over a dot, the app doesn't scan a 10GB file. It uses pl.scan_parquet().select(["ECID", "X", "Y"]) to target and fetch only the identification columns from the disk in milliseconds. This makes fluid UI interaction (like hovering/tooltips) possible even with 1.6 billion data points.
+
+"With Polars / Parquet / PyArrow = Time Saving"
+PyArrow handles the multi-threaded binary serialization (writing chunks to disk instantly without Python overhead).
+
+Parquet compresses the 400k test items into columns on your hard drive.
+Polars provides the lightning-fast expression engine to grab exactly what you need when you need it (Lazy Evaluation).
+
+ref　：
+https://lnkd.in/dZ5qJsMK
+
+
+
+🚀 Finding the Needle in the Haystack: Building an Advanced ECID Anomaly Detection System
+
+In semiconductor testing, identifying a "maverick" die hidden among thousands of parametric test items is a massive challenge. Traditional single-parameter limits often miss complex, multi-variable defects.
+
+To tackle this, I developed a comprehensive ECID Analyzer Tool in Python, blending advanced statistics with Machine Learning!
+
+💡 Core Highlights & Algorithms:
+1️⃣ Multi-Dimensional Outlier Detection: Implemented Univariate (3-Sigma), Bivariate Regression (6-Sigma), and NNR (Nearest Neighborhood Residual) to pinpoint chips that behave abnormally compared to their physical neighbors (Spatial Outliers).
+
+2️⃣ ML & Deep Learning Ensembles: • Combined PCA Reconstruction Error with Isolation Forest using a robust Rank Sum Voting mechanism to minimize false positives. • Integrated a TensorFlow Autoencoder (AE) to catch unseen, non-linear anomalies in high-dimensional spaces.
+
+3️⃣ Spatial-Aware ML: Fed die coordinates (X,Y) and radial distance into the ML models to specifically hunt down edge effects and spatial process defects.
+
+4️⃣ Extreme Performance Optimization: Running bivariate regressions across tens of thousands of tests usually causes Out-of-Memory (OOM) crashes. I optimized this using Block-wise NumPy matrix multiplication and pure algebraic Z-score transformations, making the analysis lightning-fast and memory-efficient.
+
+🛠️ Tech Stack: • Scikit-learn, TensorFlow, SciPy for modeling • Pandas, NumPy for heavy-lifting matrix operations • Matplotlib & Tkinter for interactive Wafer Maps and Scatter Plots
+
+The tool doesn't just flag anomalies; it outputs the "Top 10 Contributors" so engineers can instantly identify the root cause.
+
+I’d love to connect with other Data Scientists and Semiconductor Engineers—what's your go-to method for catching PAT (Part Average Testing) outliers?
+Let’s chat below! 👇
+
+hashtag
+#MachineLearning
+hashtag
+#DataScience
+hashtag
+#Semiconductor
+hashtag
+#AnomalyDetection
+hashtag
+#TensorFlow
+hashtag
+#Python  
+

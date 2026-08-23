@@ -1,0 +1,13 @@
+﻿# Gigantic print-ready PDF files (>1GB, exceeds GitHub 100MB limit)
+*.pdf
+書 照片/*.pdf
+
+# Office documents
+*.docx
+*.doc
+
+# Temp / Scratch files
+scratch/
+*.tmp
+.DS_Store
+Thumbs.db

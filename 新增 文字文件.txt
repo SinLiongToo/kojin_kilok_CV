@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <title>我的台灣百岳足跡地圖</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        
+        /* 左側歷程側欄樣式 */
+        .map-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 320px;
+            max-height: 85vh;
+            overflow-y: auto;
+            z-index: 1;
+        }
+        h2 { margin: 0 0 10px 0; font-size: 16px; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        .route-item { margin-bottom: 12px; font-size: 13px; line-height: 1.4; border-bottom: 1px dotted #eee; padding-bottom: 8px; }
+        .route-item:last-child { border-bottom: none; }
+        .route-date { color: #e74c3c; font-size: 11px; font-weight: bold; }
+        .mountain-tag { display: inline-block; background: #e8f4fd; color: #2980b9; padding: 1px 5px; border-radius: 3px; font-size: 11px; margin: 2px 2px 0 0; }
+        
+        /* 地圖彈出視窗樣式修改 */
+        .mapboxgl-popup-content { padding: 12px 15px; border-radius: 6px; max-width: 240px; box-shadow: 0 3px 14px rgba(0,0,0,0.2); }
+        .popup-title { font-weight: bold; font-size: 14px; margin-bottom: 4px; color: #2c3e50; }
+        .popup-meta { font-size: 12px; color: #7f8c8d; margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div class="map-overlay">
+    <h2>🏔️ 百岳足跡歷程 (2010 - 2016)</h2>
+    <div class="route-item">
+        <span class="route-date">2010.11</span><br>第一kái peh 百岳（雪山）<br>
+        <span class="mountain-tag">雪山主峰</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2011.04</span><br>南湖大山行<br>
+        <span class="mountain-tag">南湖大山</span><span class="mountain-tag">南湖東峰</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2011.10</span><br>大小霸尖山<br>
+        <span class="mountain-tag">大霸尖山</span><span class="mountain-tag">小霸尖山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2011.11</span><br>嘉明湖＋環島<br>
+        <span class="mountain-tag">三叉山</span><span class="mountain-tag">向陽山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2012.05</span><br>武陵四秀帶團<br>
+        <span class="mountain-tag">品田山</span><span class="mountain-tag">池有山</span><span class="mountain-tag">桃山</span><span class="mountain-tag">喀拉業山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2012.09</span><br>O聖縱走帶團<br>
+        <span class="mountain-tag">雪山北峰</span><span class="mountain-tag">品田山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2012.10</span><br>合歡群峰<br>
+        <span class="mountain-tag">合歡主峰</span><span class="mountain-tag">合歡東峰</span><span class="mountain-tag">合歡北峰</span><span class="mountain-tag">石門山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2012.12</span><br>北大武跨年<br>
+        <span class="mountain-tag">北大武山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.04</span><br>雪山大小劍縱走<br>
+        <span class="mountain-tag">大劍山</span><span class="mountain-tag">佳陽山</span><span class="mountain-tag">小劍山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.05</span><br>玉山主峰行<br>
+        <span class="mountain-tag">玉山主峰</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.06</span><br>志佳陽大山<br>
+        <span class="mountain-tag">志佳陽大山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.07</span><br>羊頭山單攻<br>
+        <span class="mountain-tag">羊頭山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.09</span><br>屏風山挑戰<br>
+        <span class="mountain-tag">屏風山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2013.11</span><br>奇萊南華<br>
+        <span class="mountain-tag">奇萊南峰</span><span class="mountain-tag">南華山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2014.04</span><br>北二段縱走<br>
+        <span class="mountain-tag">閂山</span><span class="mountain-tag">鈴鳴山</span><span class="mountain-tag">甘薯峰</span><span class="mountain-tag">無明山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2014.08</span><br>干卓萬群峰縱走<br>
+        <span class="mountain-tag">干卓萬山</span><span class="mountain-tag">牧山</span><span class="mountain-tag">火山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2014 / 2015</span><br>能高安東軍縱走<br>
+        <span class="mountain-tag">能高主峰</span><span class="mountain-tag">能高南峰</span><span class="mountain-tag">光頭山</span><span class="mountain-tag">白石山</span><span class="mountain-tag">安東軍山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2015.11</span><br>南橫二星<br>
+        <span class="mountain-tag">塔關山</span><span class="mountain-tag">關山嶺山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2015.12</span><br>南一段縱走<br>
+        <span class="mountain-tag">關山</span><span class="mountain-tag">海諾南山</span><span class="mountain-tag">小關山</span><span class="mountain-tag">卑南主山</span><span class="mountain-tag">庫哈諾辛山</span>
+    </div>
+    <div class="route-item">
+        <span class="route-date">2016.08</span><br>畢祿山行程<br>
+        <span class="mountain-tag">畢祿山</span>
+    </div>
+</div>
+
+<script>
+    // ⚠️ 請在這裡替換您在 Mapbox 官網註冊拿到的免費 Access Token
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+    
+    // 初始化地圖設定
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/outdoors-v12', // 使用適合戶外登山、看得見地形等高線的風格
+        center: [121.0, 23.7], // 將地圖核心對準台灣中心點
+        zoom: 7.5 // 適當的縮放大小，剛好能完整容納台灣島
+    });
+
+    // 百岳經緯度與歷程資料庫 (精準度已校對過)
+    const mountains = [
+        { name: '雪山主峰', coords: [121.2338, 24.3852], elevation: '3886m', desc: '2010.11 初登百岳 / 2012、2013 多次帶團' },
+        { name: '雪山北峰', coords: [121.2403, 24.4414], elevation: '3703m', desc: '2012.09 O聖縱走帶團' },
+        { name: '南湖大山', coords: [121.4392, 24.3619], elevation: '3742m', desc: '2011.04 第二次攀登 / 2013.02 雪期南湖' },
+        { name: '大霸尖山', coords: [121.2564, 24.4616], elevation: '3492m', desc: '2011.10 大小霸 / 2012.06 再戰大霸帶團' },
+        { name: '小霸尖山', coords: [121.2513, 24.4589], elevation: '3410m', desc: '2011.10 大小霸系列行程' },
+        { name: '三叉山', coords: [121.0225, 23.3033], elevation: '3496m', desc: '嘉明湖經典路線 (2011、2012、2013、2014 多次帶團)' },
+        { name: '向陽山', coords: [120.9934, 23.2842], elevation: '3602m', desc: '嘉明湖經典路線 (2011、2012、2013、2014 多次帶團)' },
+        { name: '品田山', coords: [121.2654, 24.4286], elevation: '3524m', desc: '武陵四秀系列 / O聖縱走' },
+        { name: '池有山', coords: [121.2858, 24.4328], elevation: '3303m', desc: '武陵四秀系列行程' },
+        { name: '桃山', coords: [121.3031, 24.4322], elevation: '3325m', desc: '武陵四秀系列行程' },
+        { name: '喀拉業山', coords: [121.3228, 24.4542], elevation: '3133m', desc: '武陵四秀系列行程' },
+        { name: '合歡山主峰', coords: [121.2694, 24.1344], elevation: '3417m', desc: '2012.10 合歡健行系列' },
+        { name: '合歡山東峰', coords: [121.2828, 24.1372], elevation: '3421m', desc: '2012.10 合歡健行系列' },
+        { name: '合歡山北峰', coords: [121.2814, 24.1814], elevation: '3422m', desc: '2012.10 健行 / 2013.01 小溪營地天巒池' },
+        { name: '石門山', coords: [121.2831, 24.1508], elevation: '3237m', desc: '2012.10 合歡健行系列' },
+        { name: '北大武山', coords: [120.7539, 22.6286], elevation: '3092m', desc: '2012 跨年跨年挑戰 / 2015.01 再訪' },
+        { name: '大劍山', coords: [121.1917, 24.3297], elevation: '3594m', desc: '2013.04 雪大小劍 / 完美谷避難事件' },
+        { name: '佳陽山', coords: [121.1819, 24.2889], elevation: '3314m', desc: '2013.04 雪大小劍系列' },
+        { name: '小劍山', coords: [121.1578, 24.2547], elevation: '3253m', desc: '2013.04 雪大小劍系列' },
+        { name: '玉山主峰', coords: [120.9572, 23.4700], elevation: '3952m', desc: '2013.05 登頂台灣第一高峰' },
+        { name: '志佳陽大山', coords: [121.2725, 24.3197], elevation: '3345m', desc: '2013.06 陡上單攻考驗' },
+        { name: '羊頭山', coords: [121.3444, 24.2089], elevation: '3035m', desc: '2013.07 與隊友同遊' },
+        { name: '屏風山', coords: [121.3364, 24.1611], elevation: '3250m', desc: '2013.09 隨廚師登山隊挑戰' },
+        { name: '奇萊南峰', coords: [121.2797, 24.0608], elevation: '3358m', desc: '2013.11 奇萊南華綠色草原行' },
+        { name: '南華山', coords: [121.2917, 24.0392], elevation: '3184m', desc: '2013.11 奇萊南華系列' },
+        { name: '閂山', coords: [121.3400, 24.2861], elevation: '3168m', desc: '2014.04 北二段經典縱走' },
+        { name: '鈴鳴山', coords: [121.3622, 24.2567], elevation: '3272m', desc: '2014.04 北二段經典縱走' },
+        { name: '甘薯峰', coords: [121.3853, 24.3122], elevation: '3158m', desc: '2014.04 北二段經典縱走' },
+        { name: '無明山', coords: [121.3931, 24.2858], elevation: '3451m', desc: '2014.04 北二段 / 經鬼門關斷崖' },
+        { name: '干卓萬山', coords: [121.0911, 23.8844], elevation: '3284m', desc: '2014.08 干卓萬群峰高難度縱走' },
+        { name: '牧山', coords: [121.1344, 23.8697], elevation: '3241m', desc: '2014.08 干卓萬群峰縱走' },
+        { name: '火山', coords: [121.1619, 23.8625], elevation: '3258m', desc: '2014.08 干卓萬群峰縱走 (萬東山)' },
+        { name: '能高山主峰', coords: [121.2581, 24.0044], elevation: '3262m', desc: '2014.11 & 2015.11 兩度造訪能高安東軍' },
+        { name: '能高山南峰', coords: [121.2694, 23.9578], elevation: '3349m', desc: '能高安東軍縱走 / 險峻段' },
+        { name: '光頭山', coords: [121.2742, 23.9214], elevation: '3060m', desc: '能高安東軍縱走 / 高山美麗草原' },
+        { name: '白石山', coords: [121.2828, 23.9017], elevation: '3110m', desc: '能高安東軍縱走 / 白石池絕美風光' },
+        { name: '安東軍山', coords: [121.2653, 23.8647], elevation: '3068m', desc: '能高安東軍縱走 / 水鹿天堂完美結尾' },
+        { name: '塔關山', coords: [120.9317, 23.2503], elevation: '3222m', desc: '2015.11 南橫二星系列行程' },
+        { name: '關山嶺山', coords: [120.9572, 23.2708], elevation: '3176m', desc: '2015.11 南橫二星系列行程' },
+        { name: '關山', coords: [120.9103, 23.2247], elevation: '3668m', desc: '2015.12 南一段跨年縱走 / 南台首岳' },
+        { name: '海諾南山', coords: [120.8989, 23.1953], elevation: '3175m', desc: '2015.12 南一段縱走' },
+        { name: '小關山', coords: [120.8711, 23.1119], elevation: '3249m', desc: '2015.12 南一段縱走' },
+        { name: '卑南主山', coords: [120.8731, 23.0117], elevation: '3295m', desc: '2015.12 南一段終點站' },
+        { name: '庫哈諾辛山', coords: [120.8931, 23.2658], elevation: '3115m', desc: '2015.12 南一段縱走開端' },
+        { name: '畢祿山', coords: [121.3417, 24.2142], elevation: '3371m', desc: '2016.08 畢祿山行程挑戰' }
+    ];
+
+    // 在地圖上為每座山頭自動產生大頭針標記與彈出視窗
+    mountains.forEach(mtn => {
+        const popup = new mapboxgl.Popup({ offset: 25 })
+            .setHTML(`
+                <div class="popup-title">${mtn.name}</div>
+                <div class="popup-meta">海拔高度：${mtn.elevation}</div>
+                <div style="font-size:12px; color:#34495e; line-height:1.3;">${mtn.desc}</div>
+            `);
+
+        // 使用地圖標記紅色點點
+        new mapboxgl.Marker({ color: '#e74c3c' })
+            .setLngLat(mtn.coords)
+            .setPopup(popup)
+            .addTo(map);
+    });
+
+    // 在地圖右上角增加縮放與旋轉控制鈕
+    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+</script>
+
+</body>
+</html>
