@@ -5,6 +5,14 @@
 // --- Database Definitions ---
 const RACES_DATABASE = [
   {
+    "id": 85,
+    "name": "2026 府城100公里超級馬拉松 09/13 5:30起跑",
+    "date": "2026/9/13",
+    "time": "30.5K；3:34:50",
+    "category": "half",
+    "categoryDisplay": "半馬"
+  },
+  {
     "id": 84,
     "name": "2026 聖母廟月老姻緣紅線牽馬拉松",
     "date": "2026/8/15",
