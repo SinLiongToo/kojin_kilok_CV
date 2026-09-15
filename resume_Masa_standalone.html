@@ -296,6 +296,23 @@ img {
     gap: 16px;
 }
 
+.nav-last-updated {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+body.light-theme .nav-last-updated {
+    background: rgba(0, 0, 0, 0.04);
+}
+
 /* Theme Toggle Button */
 .theme-toggle-btn {
     background: transparent;
@@ -2167,6 +2184,7 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
 @media (max-width: 768px) {
     /* Mobile Menu Drawer */
     .hamburger-btn { display: flex; }
+    .nav-last-updated { display: none !important; }
     
     .nav-menu {
         position: fixed;
@@ -2408,6 +2426,9 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
             </nav>
             
             <div class="nav-actions">
+                <span class="nav-last-updated" title="資料最後更新時間">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-09-15 15:35
+                </span>
                 <button id="themeToggle" class="theme-toggle-btn" aria-label="切換主題">
                     <i class="fa-solid fa-sun icon-sun"></i>
                     <i class="fa-solid fa-moon icon-moon"></i>
@@ -2466,6 +2487,8 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
                                     <div class="profile-meta">
                                         <span><i class="fa-solid fa-location-dot"></i> Tainan, Taiwan</span>
                                         <span><i class="fa-solid fa-envelope"></i> masahltu0322@gmail.com</span>
+                                        <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/masatu19810322/" target="_blank" style="color:inherit;text-decoration:none;">linkedin.com/in/masatu19810322</a></span>
+                                        <span><i class="fa-solid fa-clock-rotate-left"></i> 更新：2026-09-15 15:35</span>
                                     </div>
                                     <div class="profile-tags">
                                         <span>#NPI</span>
@@ -3169,7 +3192,12 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info-block">
-                    <h2>與我鏈結</h2>
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+                        <h2 style="margin-bottom: 0;">與我鏈結 (聯絡資訊)</h2>
+                        <span style="font-size: 0.82rem; color: var(--accent-tech); background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.25); padding: 4px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-clock-rotate-left"></i> 更新時間：2026-09-15 15:35
+                        </span>
+                    </div>
                     <p>不論您是半導體工程師、資料科學家、台語文學同好、馬拉松跑者，或是對我出版的著作感興趣，都非常歡迎與我聯繫，共同探討跨界合作的無限可能。</p>
                     
                     <div class="contact-methods">
@@ -3178,6 +3206,13 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
                             <div>
                                 <h4>電子信箱</h4>
                                 <p><a href="mailto:masahltu0322@gmail.com">masahltu0322@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://www.linkedin.com/in/masatu19810322/" target="_blank">linkedin.com/in/masatu19810322</a></p>
                             </div>
                         </div>
                         <div class="contact-method-item">
@@ -3192,6 +3227,13 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
                             <div>
                                 <h4>主要活動地點</h4>
                                 <p>台灣 台南市 (Tainan, Taiwan)</p>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <div>
+                                <h4>最後更新時間 (Last Updated)</h4>
+                                <p>2026-09-15 15:35</p>
                             </div>
                         </div>
                     </div>
@@ -3224,7 +3266,7 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. </p>
-            <p class="footer-sub">跨越晶片與文字的邊界，持續奔跑。 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            <p class="footer-sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-15 15:35 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
         </div>
     </footer>
 

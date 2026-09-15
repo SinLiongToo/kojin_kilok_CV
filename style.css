@@ -276,6 +276,23 @@ img {
     gap: 16px;
 }
 
+.nav-last-updated {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+body.light-theme .nav-last-updated {
+    background: rgba(0, 0, 0, 0.04);
+}
+
 /* Theme Toggle Button */
 .theme-toggle-btn {
     background: transparent;
@@ -2103,6 +2120,7 @@ body.light-theme .run-badge { background: rgba(5, 150, 105, 0.08); color: #05966
 @media (max-width: 768px) {
     /* Mobile Menu Drawer */
     .hamburger-btn { display: flex; }
+    .nav-last-updated { display: none !important; }
     
     .nav-menu {
         position: fixed;
