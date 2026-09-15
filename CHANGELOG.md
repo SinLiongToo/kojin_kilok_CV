@@ -5,6 +5,14 @@
 ---
 
 
+## [v1.1.11] - 2026-09-15
+
+### 新增與修正功能
+- **新增碩士論文數位典藏連結**：
+  - 於「學歷與專業認證 (Education & Certifications)」的碩士學位卡片（國立中央大學電機工程學研究所）新增碩士論文檢視按鈕（`View Thesis (檢視論文)`），直連國立中央大學圖書館博碩士論文系統（`https://etd.lib.ncu.edu.tw/thesis/detail/acc1cd69b596e6b3bccf52b0019d9a15/?seq=7`）。
+  - 同步於「學術著作與專利 (Publications & Patents)」中的碩士論文項目標題加入外連論文系統連結與外開圖示。
+  - 同步更新主頁面 `index.html`、列印版 `resume_Masa_Hsin_Lung_Tu.html` 與單檔案獨立版 `resume_Masa_standalone.html`。
+
 ## [v1.1.10] - 2026-09-14
 
 ### 新增與修正功能
