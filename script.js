@@ -865,6 +865,29 @@ const PATENTS_DATABASE = [
   }
 ];
 
+const BADGES_DATABASE = [
+  {
+    id: "foxconn",
+    company: "Foxconn (鴻海精密)",
+    companyEn: "Hon Hai Precision Industry",
+    period: "2006 - 2011",
+    title: "RF System Engineer",
+    image: "assets/images/badge_foxconn.jpg",
+    caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
+    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
+  },
+  {
+    id: "mstar",
+    company: "MStar (晨星半導體)",
+    companyEn: "MStar Semiconductor",
+    period: "2011 - 2012",
+    title: "RF Senior Engineer",
+    image: "assets/images/badge_mstar.jpg",
+    caption: "MStar Semiconductor 晨星半導體 | 識別證 (2011 - 2012)",
+    desc: "負責藍牙晶片系統級測試、設計驗證、失效分析與頻段共存排查。"
+  }
+];
+
 const BOOKS_DATABASE = [
   {
     "title": "放毒",
@@ -1481,6 +1504,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Running components
     initRaceLedger();
+    
+    // Badges components
+    renderBadges();
+    initBadgesModal();
     
     // Collapsible sections
     initCollapsibleSections();
@@ -2194,3 +2221,109 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// --------------------------------------------------------------------------
+// 15. Employee Badges Management & Modal Flow
+// --------------------------------------------------------------------------
+function renderBadges() {
+    // 1. Update Hero Card Back Stack & Count
+    const stackContainer = document.getElementById("badgeAvatarStack");
+    if (stackContainer && typeof BADGES_DATABASE !== "undefined") {
+        stackContainer.innerHTML = BADGES_DATABASE.map(b => 
+            `<img src="${b.image}" alt="${b.company}" class="badge-stack-img" title="${b.company} (${b.period})">`
+        ).join("");
+    }
+    const badgeCountText = document.getElementById("badgeCountText");
+    if (badgeCountText && typeof BADGES_DATABASE !== "undefined") {
+        badgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-chevron-right"></i>`;
+    }
+
+    // 2. Render Modal List
+    const modalList = document.getElementById("badgesModalList");
+    if (modalList && typeof BADGES_DATABASE !== "undefined") {
+        modalList.innerHTML = BADGES_DATABASE.map(b => `
+            <div class="badge-item-card">
+                <div class="badge-img-frame" data-img="${b.image}" data-caption="${b.caption}" title="點擊放大檢視">
+                    <img src="${b.image}" alt="${b.company}" class="badge-modal-img" loading="lazy">
+                    <span class="badge-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> 點擊放大</span>
+                </div>
+                <div class="badge-item-info">
+                    <div class="badge-item-header">
+                        <h4 class="badge-item-company">${b.company}</h4>
+                        <span class="badge-item-period">${b.period}</span>
+                    </div>
+                    <div class="badge-item-title">${b.title}</div>
+                    <p class="badge-item-desc">${b.desc || ""}</p>
+                </div>
+            </div>
+        `).join("");
+
+        // Attach click listeners to badge frames inside modal
+        modalList.querySelectorAll(".badge-img-frame").forEach(frame => {
+            frame.addEventListener("click", () => {
+                const src = frame.getAttribute("data-img");
+                const cap = frame.getAttribute("data-caption");
+                openImageModal(src, cap);
+            });
+        });
+    }
+}
+
+function initBadgesModal() {
+    const openBtn = document.getElementById("openBadgesModalBtn");
+    const modal = document.getElementById("badgesModal");
+    const closeBtn = document.getElementById("closeBadgesModal");
+
+    if (openBtn && modal) {
+        openBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Stop profile card from flipping
+            modal.classList.add("active");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        });
+    }
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener("click", () => {
+            closeBadgesModal();
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeBadgesModal();
+            }
+        });
+    }
+
+    // Keyboard ESC listener
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+            closeBadgesModal();
+        }
+    });
+
+    // Timeline badge link clicks
+    document.querySelectorAll(".timeline-badge-link").forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const badgeId = link.getAttribute("data-badge-id");
+            if (typeof BADGES_DATABASE !== "undefined") {
+                const badge = BADGES_DATABASE.find(b => b.id === badgeId);
+                if (badge) {
+                    openImageModal(badge.image, badge.caption);
+                }
+            }
+        });
+    });
+}
+
+function closeBadgesModal() {
+    const modal = document.getElementById("badgesModal");
+    if (modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "auto";
+    }
+}

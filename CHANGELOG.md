@@ -5,6 +5,27 @@
 ---
 
 
+## [v1.1.12] - 2026-09-16
+
+### 新增與修正功能
+- **整合歷年實體工作識別證 (Employee Badge IDs) 與畫廊彈窗**：
+  - **圖片精密剪裁與去雜物**：
+    - 精密裁切 Foxconn 識別證（`assets/images/badge_foxconn.jpg`），去除左右黑底桌面雜物，完整保留白色皮革縫線卡夾、鴻海 Logo、姓名、照片與工號。
+    - 精密裁切 MStar 晨星半導體識別證（`assets/images/badge_mstar.jpg`），去除桌面留白，保留標準紅標白底卡面、大頭照與完整文字。
+  - **Hero 個人翻轉卡片背面整合（方案三）**：
+    - 於卡片背面新增「🏷️ 歷年工作識別證」互動膠囊按鈕，動態展示微縮重疊卡片圖示與筆數標籤（如「2 張 ❯」）。
+    - 點擊按鈕時透過事件阻斷（`e.stopPropagation()`）防止卡片翻轉，直覺開啟「歷年工作識別證專屬畫廊彈窗 (Career Badges Modal)」。
+  - **專屬工作識別證畫廊 (Career Badges Modal)**：
+    - 展示各時期實體工作證，包含公司名稱、任職年份、工程職稱與職責簡介。
+    - 支援滑鼠懸停微浮動反饋，點擊任一張識別證即可透過高解析燈箱（Lightbox Modal）進一步放大檢視細節。
+  - **經歷時間軸關聯串接 (Timeline Badges)**：
+    - 於「半導體與科技」經歷時間軸的 MStar 與 Foxconn 職歷標題旁加入「🏷️ 識別證」佐證按鈕，點擊直達燈箱大圖。
+  - **模組化資料流與未來擴充能力 (Extensible Data Flow)**：
+    - 建立 `BADGES_DATABASE` 資料結構與動態渲染器 `renderBadges()`。未來若新增 NXP 等新工牌，只需將圖片放入 `assets/images/` 並於陣列新增一筆物件，卡片背面按鈕與彈窗將自動動態更新。
+  - **同步更新三份版本**：
+    - 同步更新主頁面 `index.html`、樣式表 `style.css`、互動引擎 `script.js`、單檔案獨立版 `resume_Masa_standalone.html`（已將工牌轉為 base64 內嵌）與列印版 `resume_Masa_Hsin_Lung_Tu.html`。
+    - 同步更新導航列與頁尾之最後資料更新時間為 `2026-09-16 12:30`。
+
 ## [v1.1.11] - 2026-09-15
 
 ### 新增與修正功能

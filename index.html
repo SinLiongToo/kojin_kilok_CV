@@ -37,7 +37,7 @@
             
             <div class="nav-actions">
                 <span class="nav-last-updated" title="資料最後更新時間">
-                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-09-15 15:35
+                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-09-16 12:30
                 </span>
                 <button id="themeToggle" class="theme-toggle-btn" aria-label="切換主題">
                     <i class="fa-solid fa-sun icon-sun"></i>
@@ -141,6 +141,16 @@
                                         <div class="achievement-pill">
                                             <i class="fa-solid fa-kit-medical"></i> EMT-1 救護技術員
                                         </div>
+                                    </div>
+                                    <div class="card-badge-btn" id="openBadgesModalBtn" title="點擊檢視歷年工作識別證">
+                                        <div class="badge-btn-left">
+                                            <div class="badge-avatar-stack" id="badgeAvatarStack">
+                                                <img src="assets/images/badge_foxconn.jpg" alt="Foxconn" class="badge-stack-img">
+                                                <img src="assets/images/badge_mstar.jpg" alt="MStar" class="badge-stack-img">
+                                            </div>
+                                            <span><i class="fa-solid fa-id-badge"></i> 歷年工作識別證</span>
+                                        </div>
+                                        <span class="badge-pill-count" id="badgeCountText">2 張 <i class="fa-solid fa-chevron-right"></i></span>
                                     </div>
                                     <div class="card-hint">
                                         <i class="fa-solid fa-rotate"></i> 點擊翻回正面
@@ -362,7 +372,7 @@
                             <div class="timeline-dot tech-dot"></div>
                             <div class="timeline-date">Oct 2011 - Apr 2012</div>
                             <div class="timeline-content">
-                                <h4>RF Senior Engineer | MStar Semiconductor</h4>
+                                <h4>RF Senior Engineer | MStar Semiconductor <a href="#openBadgesModal" class="timeline-badge-link" data-badge-id="mstar" title="查看 MStar 識別證"><i class="fa-solid fa-id-badge"></i> 識別證</a></h4>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
                                     <p style="font-size: 0.95rem; color: var(--text-primary);">In charge of Bluetooth transceiver system-level verification, customer failures debugging, and co-existence validation between Bluetooth and cellular radio bands.</p>
                                     <p style="font-size: 0.88rem; color: var(--text-secondary); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 6px;"><i class="fa-solid fa-language text-muted"></i> 負責藍牙晶片系統級測試、設計驗證、失效分析、以及藍牙與行動通訊頻段共存性問題排查。</p>
@@ -375,7 +385,7 @@
                             <div class="timeline-dot tech-dot"></div>
                             <div class="timeline-date">Jan 2006 - Oct 2011</div>
                             <div class="timeline-content">
-                                <h4>RF System Engineer | Foxconn (富士康)</h4>
+                                <h4>RF System Engineer | Foxconn (富士康) <a href="#openBadgesModal" class="timeline-badge-link" data-badge-id="foxconn" title="查看 Foxconn 識別證"><i class="fa-solid fa-id-badge"></i> 識別證</a></h4>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
                                     <p style="font-size: 0.95rem; color: var(--text-primary);">Designed and verified indoor/outdoor CPEs and base station modules for WiMAX networks. Authored comprehensive technical proposals in response to RFQs, including simulation designs, BOM cost optimization, and project scheduling. Developed automated test programs in collaboration with instrument vendors to reduce test cycle times. Experienced in ESD, EMI regulatory testing, and FCC/ETSI certifications. Trained junior engineers in impedance matching and ADS/HFSS EM simulations.</p>
                                     <p style="font-size: 0.88rem; color: var(--text-secondary); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 6px;"><i class="fa-solid fa-language text-muted"></i> 負責 WiMAX 終端設備與基站模組設計與模擬。撰寫 RFQ 設計提案、優化 BOM 成本及時程規劃。開發自動化測試程式縮短測試時間，熟稔 ESD、EMI、FCC/ETSI 認證流程與天線模擬。</p>
@@ -907,9 +917,25 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. </p>
-            <p class="footer-sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-15 15:35 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            <p class="footer-sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-16 12:30 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
         </div>
     </footer>
+
+    <!-- Career Badges Modal Gallery -->
+    <div id="badgesModal" class="badges-modal" aria-hidden="true" role="dialog">
+        <div class="badges-modal-content">
+            <div class="badges-modal-header">
+                <div>
+                    <h3 class="badges-modal-title"><i class="fa-solid fa-id-badge text-gradient"></i> 歷年工作識別證 (Career Badges)</h3>
+                    <p class="badges-modal-subtitle">20+ 年跨國大廠與半導體研發足跡之實體證件存檔</p>
+                </div>
+                <button class="close-badges-modal-btn" id="closeBadgesModal" aria-label="關閉識別證視窗">&times;</button>
+            </div>
+            <div class="badges-modal-body" id="badgesModalList">
+                <!-- Dynamically populated from BADGES_DATABASE in script.js -->
+            </div>
+        </div>
+    </div>
 
     <!-- Video Modal Player -->
     <div id="videoModal" class="video-modal" aria-hidden="true" role="dialog">
