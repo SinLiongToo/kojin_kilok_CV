@@ -2247,7 +2247,7 @@ function renderBadges() {
     }
     const frontBadgeCountText = document.getElementById("frontBadgeCountText");
     if (frontBadgeCountText && typeof BADGES_DATABASE !== "undefined") {
-        frontBadgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-rotate"></i>`;
+        frontBadgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-expand"></i>`;
     }
 
     // 2. Render Modal List
@@ -2281,6 +2281,24 @@ function renderBadges() {
     }
 }
 
+function openBadgesModal() {
+    const modal = document.getElementById("badgesModal");
+    if (modal) {
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeBadgesModal() {
+    const modal = document.getElementById("badgesModal");
+    if (modal) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "auto";
+    }
+}
+
 function initBadgesModal() {
     const openBtn = document.getElementById("openBadgesModalBtn");
     const modal = document.getElementById("badgesModal");
@@ -2288,20 +2306,22 @@ function initBadgesModal() {
     const frontBadgesBtn = document.getElementById("frontBadgesBtn");
     const profileCard = document.querySelector(".profile-card");
 
-    // Front badge button flips the card to the back
+    // Front badge button flips the card to the back AND opens the enlarged badges gallery
     if (frontBadgesBtn && profileCard) {
         frontBadgesBtn.addEventListener("click", (e) => {
             e.stopPropagation();
-            profileCard.classList.toggle("flipped");
+            const wasFlipped = profileCard.classList.contains("flipped");
+            profileCard.classList.add("flipped");
+            setTimeout(() => {
+                openBadgesModal();
+            }, wasFlipped ? 50 : 380);
         });
     }
 
     if (openBtn && modal) {
         openBtn.addEventListener("click", (e) => {
             e.stopPropagation(); // Stop profile card from flipping
-            modal.classList.add("active");
-            modal.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
+            openBadgesModal();
         });
     }
 
@@ -2339,13 +2359,4 @@ function initBadgesModal() {
             }
         });
     });
-}
-
-function closeBadgesModal() {
-    const modal = document.getElementById("badgesModal");
-    if (modal) {
-        modal.classList.remove("active");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "auto";
-    }
 }
