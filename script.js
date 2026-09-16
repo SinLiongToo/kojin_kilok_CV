@@ -2238,6 +2238,18 @@ function renderBadges() {
         badgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-chevron-right"></i>`;
     }
 
+    // 1b. Update Hero Card Front Stack & Count
+    const frontStackContainer = document.getElementById("frontBadgeAvatarStack");
+    if (frontStackContainer && typeof BADGES_DATABASE !== "undefined") {
+        frontStackContainer.innerHTML = BADGES_DATABASE.map(b => 
+            `<img src="${b.image}" alt="${b.company}" class="badge-stack-img" title="${b.company} (${b.period})">`
+        ).join("");
+    }
+    const frontBadgeCountText = document.getElementById("frontBadgeCountText");
+    if (frontBadgeCountText && typeof BADGES_DATABASE !== "undefined") {
+        frontBadgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-rotate"></i>`;
+    }
+
     // 2. Render Modal List
     const modalList = document.getElementById("badgesModalList");
     if (modalList && typeof BADGES_DATABASE !== "undefined") {
@@ -2273,6 +2285,16 @@ function initBadgesModal() {
     const openBtn = document.getElementById("openBadgesModalBtn");
     const modal = document.getElementById("badgesModal");
     const closeBtn = document.getElementById("closeBadgesModal");
+    const frontBadgesBtn = document.getElementById("frontBadgesBtn");
+    const profileCard = document.querySelector(".profile-card");
+
+    // Front badge button flips the card to the back
+    if (frontBadgesBtn && profileCard) {
+        frontBadgesBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            profileCard.classList.toggle("flipped");
+        });
+    }
 
     if (openBtn && modal) {
         openBtn.addEventListener("click", (e) => {
