@@ -5,6 +5,22 @@
 ---
 
 
+## [v1.1.14] - 2026-09-17
+
+### 新增與優化功能
+- **整合 NXP 恩智浦半導體實體工作識別證 (NXP Employee Badge ID)**：
+  - **高精細度圖像裁切與優化**：
+    - 處理 `resume_picture/NXP.jpg`，精準裁切出 NXP 識別證主體，切除左側手指邊緣與背景雜物，完整保留經典 NXP 高雄廠 (Kaohsiung) 證件格式、橘藍白品牌識別與卡面細節，產出輕量化高畫質圖檔 `assets/images/badge_nxp.jpg`。
+  - **識別證畫廊支援橫向/直向雙規格自適應排版 (Responsive Badge Frames)**：
+    - 針對直向卡片（Foxconn、MStar）與橫向卡片（NXP 寬高比約 1.63）混合展示之挑戰，升級畫廊容器與卡片畫框設計。
+    - 調整彈窗最大寬度至 960px，畫框規格升級為 270×250px 搭配深色沉浸底襯（`#0b1120`）與 `object-fit: contain`，確保橫向與直向識別證皆能 100% 完整呈現不被邊緣裁切或形變。
+  - **全站元件無縫聯動**：
+    - 卡片正面與背面之頭像堆疊同步擴充為 3 張微縮圖，數量標籤自動更新為「3 張 🔄」。
+    - 於工作經歷時間軸中的「NXP Semiconductors 恩智浦半導體」職歷標題旁新增「🏷️ 識別證」佐證按鈕，一鍵直達高解析度燈箱。
+  - **多版本同步與 Base64 離線化**：
+    - 同步更新 `index.html`、`style.css`、`script.js`、`resume_Masa_standalone.html`（已將 NXP 識別證完整轉為 base64 內嵌以維持完全離線自包含）與 `resume_Masa_Hsin_Lung_Tu.html`。
+    - 同步更新架構與維護說明文件 `README.md`。
+
 ## [v1.1.13] - 2026-09-16
 
 ### 新增與優化功能

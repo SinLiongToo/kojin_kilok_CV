@@ -867,14 +867,14 @@ const PATENTS_DATABASE = [
 
 const BADGES_DATABASE = [
   {
-    id: "foxconn",
-    company: "Foxconn (鴻海精密)",
-    companyEn: "Hon Hai Precision Industry",
-    period: "2006 - 2011",
-    title: "RF System Engineer",
-    image: "assets/images/badge_foxconn.jpg",
-    caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
-    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
+    id: "nxp",
+    company: "NXP (恩智浦半導體)",
+    companyEn: "NXP Semiconductors",
+    period: "2012 - Present",
+    title: "Principle Product Engineer",
+    image: "assets/images/badge_nxp.jpg",
+    caption: "NXP Semiconductors 恩智浦半導體 (Kaohsiung) | 識別證 (2012 - Present)",
+    desc: "負責 5G 車用雷達晶片與 77G ADAS 雷達處理器之 NPI 導入、良率優化與全球封測驗證。"
   },
   {
     id: "mstar",
@@ -885,6 +885,16 @@ const BADGES_DATABASE = [
     image: "assets/images/badge_mstar.jpg",
     caption: "MStar Semiconductor 晨星半導體 | 識別證 (2011 - 2012)",
     desc: "負責藍牙晶片系統級測試、設計驗證、失效分析與頻段共存排查。"
+  },
+  {
+    id: "foxconn",
+    company: "Foxconn (鴻海精密)",
+    companyEn: "Hon Hai Precision Industry",
+    period: "2006 - 2011",
+    title: "RF System Engineer",
+    image: "assets/images/badge_foxconn.jpg",
+    caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
+    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
   }
 ];
 

@@ -14,8 +14,8 @@
   - 🏃 **極限超馬與越野 (Ultra Running)**：85 場全馬與超馬紀錄（含 100K 超馬）、台灣百岳地圖、95 筆真實 GPX 跑步足跡互動地圖。
 - **極致前端體驗**：
   - 🌓 **雙主題流暢切換**：深色模式（Dark Theme）與淺色模式（Light Theme）一鍵無縫切換，並與足跡地圖即時同步。
-  - 🔄 **3D 翻轉個人名片 (Profile Card)**：首頁 Hero 視覺卡正面展示個人資訊，背面展示極限數據總覽與實體工作識別證入口。
-  - 🏷️ **歷年實體工作識別證畫廊 (Career Badges Archive)**：收錄 Foxconn、MStar 等真實工作識別證，具備高畫質燈箱放大功能與經歷時間軸關聯。
+  - 🔄 **3D 翻轉個人名片 (Profile Card)**：首頁 Hero 視覺卡正面展示個人資訊，背面展示極限數據總覽與實體工作識別證入口。點擊正面「一鍵反轉」可順暢翻轉並即時彈出放大畫廊。
+  - 🏷️ **歷年實體工作識別證畫廊 (Career Badges Archive)**：收錄 NXP (恩智浦半導體)、MStar (晨星半導體)、Foxconn (鴻海精密) 等真實工作識別證，具備高畫質燈箱放大功能與經歷時間軸關聯。
   - 📱 **全響應式設計**：支援桌機、平板與智慧型手機，提供折疊式展開與平滑滾動導覽。
 
 ---
@@ -33,10 +33,14 @@ PERSONAL CV/
 ├── running_tracks_data.js         # 壓縮後之跑步軌跡資料集
 ├── assets/
 │   └── images/                    # 專案圖片、書封、以及工作識別證圖檔
-│       ├── badge_foxconn.jpg      # Foxconn 實體工作證（已裁切）
+│       ├── badge_nxp.jpg          # NXP 恩智浦半導體實體工作證（已裁切）
 │       ├── badge_mstar.jpg        # MStar 晨星半導體工作證（已裁切）
+│       ├── badge_foxconn.jpg      # Foxconn 實體工作證（已裁切）
 │       └── ...
 ├── resume_picture/                # 原始待處理之證件照片暫存資料夾
+│   ├── NXP.jpg                    # NXP 原始照片檔
+│   ├── foxconn.jpg                # 鴻海原始照片檔
+│   └── mstar.jpg                  # 晨星原始照片檔
 ├── CHANGELOG.md                   # 專案版本詳細開發與維護變更記錄
 └── README.md                      # 本說明文件
 ```
@@ -45,54 +49,55 @@ PERSONAL CV/
 
 ## 🏷️ 如何新增工作識別證 (Badge ID Workflow)
 
-系統已建立高度模組化且易於擴充的資料結構（Data Flow）。未來若要新增新的實體識別證（例如 NXP 荷蘭出差證、NXP 台灣證等），請遵循以下簡易流程：
+系統已建立高度模組化且易於擴充的資料結構（Data Flow）。未來若要新增新的實體識別證（例如 NXP 荷蘭總部出差證等），請遵循以下簡易流程：
 
 ### 步驟 1：準備與裁切圖片
 1. 將拍攝好的識別證照片放入 `resume_picture/` 或直接處理。
-2. 建議裁切為垂直卡片比例（約 `1 : 1.4` 至 `1 : 1.6`，例如寬 450px × 高 650px）。
+2. 直向卡片比例約 `1 : 1.4` 至 `1 : 1.6`（例如 450px × 650px），橫向卡片比例約 `1.6 : 1`（例如 800px × 490px）。
 3. 去除周遭多餘背景雜物，保留完整的公司 Logo、照片、姓名與識別號碼。
-4. 將處理完成的高解析圖檔存入 `assets/images/`，命名範例：`badge_nxp.jpg`。
+4. 將處理完成的高解析圖檔存入 `assets/images/`，命名範例：`badge_xxx.jpg`。
 
 ### 步驟 2：在 `script.js` 的 `BADGES_DATABASE` 中追加資料
 開啟 `script.js`，找到 `const BADGES_DATABASE = [...]`，在陣列中加入新物件：
 
 ```javascript
 const BADGES_DATABASE = [
-  // 現有識別證
   {
-    id: "foxconn",
-    company: "Foxconn (鴻海精密)",
-    period: "2006 - 2011",
-    title: "RF System Engineer",
-    image: "assets/images/badge_foxconn.jpg",
-    caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
-    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
+    id: "nxp",
+    company: "NXP (恩智浦半導體)",
+    companyEn: "NXP Semiconductors",
+    period: "2012 - Present",
+    title: "Principle Product Engineer",
+    image: "assets/images/badge_nxp.jpg",
+    caption: "NXP Semiconductors 恩智浦半導體 (Kaohsiung) | 識別證 (2012 - Present)",
+    desc: "負責 5G 車用雷達晶片與 77G ADAS 雷達處理器之 NPI 導入、良率優化與全球封測驗證。"
   },
   {
     id: "mstar",
     company: "MStar (晨星半導體)",
+    companyEn: "MStar Semiconductor",
     period: "2011 - 2012",
     title: "RF Senior Engineer",
     image: "assets/images/badge_mstar.jpg",
     caption: "MStar Semiconductor 晨星半導體 | 識別證 (2011 - 2012)",
     desc: "負責藍牙晶片系統級測試、設計驗證、失效分析與頻段共存排查。"
   },
-  // 🔽 未來新增的新工牌 🔽
   {
-    id: "nxp",
-    company: "NXP (恩智浦半導體)",
-    period: "2012 - Present",
-    title: "Advanced / Principle Product Engineer",
-    image: "assets/images/badge_nxp.jpg",
-    caption: "NXP Semiconductors | 識別證 (2012 - Present)",
-    desc: "主導車用 5G 雷達、ADAS 處理器之 NPI 導入、六標準差良率改善與全球封測驗證。"
+    id: "foxconn",
+    company: "Foxconn (鴻海精密)",
+    companyEn: "Hon Hai Precision Industry",
+    period: "2006 - 2011",
+    title: "RF System Engineer",
+    image: "assets/images/badge_foxconn.jpg",
+    caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
+    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
   }
 ];
 ```
 
 ### 步驟 3：自動生效效果
-- **Hero 卡片背面**：按鈕上的微型重疊圖示堆疊與總張數（例如「3 張 ❯」）將**自動動態計算與更新**。
-- **識別證彈窗 (Badges Modal)**：彈窗內會自動生成該張工牌的展示卡，點擊可直接透過高解析度燈箱（Lightbox）放大檢視。
+- **Hero 卡片正面與背面**：按鈕上的微型重疊圖示堆疊與總張數（例如「3 張 ⤢」）將**自動動態計算與更新**。
+- **識別證彈窗 (Badges Modal)**：彈窗內會自動生成該張工牌的展示卡，點擊可直接透過高解析度燈箱（Lightbox）滿版放大檢視。
 - **經歷時間軸關聯 (選用)**：可在 `index.html` 該任職公司的經歷標題加上：
   ```html
   <a href="#openBadgesModal" class="timeline-badge-link" data-badge-id="nxp" title="查看 NXP 識別證"><i class="fa-solid fa-id-badge"></i> 識別證</a>
