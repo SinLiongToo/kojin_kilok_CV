@@ -5,6 +5,15 @@
 ---
 
 
+## [v1.1.15] - 2026-09-18
+
+### 新增與優化功能
+- **優化首頁頂部導航與主視覺區塊垂直間距 (Hero Spacing Optimization)**：
+  - **消除導航列下方多餘留白**：移除 `.hero-section` 原始宣告之 `min-height: 80vh` 與 `display: flex; align-items: center`，徹底解決大螢幕彈性垂直置中將 Hero 內容過度向下推擠之問題。
+  - **緊湊精緻的上方留白規劃**：將頂部 padding 由 140px 調校為 95px（桌機版）與 85px（手機版，max-width: 768px），扣除 70px 固定導航列高度後，內容緊接在導航列下方 25px（手機 15px），排版緊湊大器且視覺平衡。
+  - **首屏可視度大幅提升 (Above-the-Fold)**：在一般桌機、筆電或平板螢幕下，個人 3D 翻轉卡片、專業標籤、標題、自介與按鈕均能完整落於首屏內，大幅提升第一眼閱覽體驗。
+  - **三版本完全同步**：同步更新 `style.css`、單檔案獨立版 `resume_Masa_standalone.html` 以及列印版 `resume_Masa_Hsin_Lung_Tu.html`。
+
 ## [v1.1.14] - 2026-09-17
 
 ### 新增與優化功能
