@@ -28,17 +28,21 @@
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link active">關於我</a>
-                <a href="#tech" class="nav-link" data-tab="tech">半導體與科技</a>
-                <a href="#lit" class="nav-link" data-tab="lit">台語文學創作</a>
-                <a href="#running" class="nav-link" data-tab="running">極限超馬越野與登山</a>
-                <a href="#contact" class="nav-link">聯絡資訊</a>
+                <a href="#about" class="nav-link active" data-i18n="nav_about">關於我</a>
+                <a href="#tech" class="nav-link" data-tab="tech" data-i18n="nav_tech">半導體與科技</a>
+                <a href="#lit" class="nav-link" data-tab="lit" data-i18n="nav_lit">台語文學創作</a>
+                <a href="#running" class="nav-link" data-tab="running" data-i18n="nav_running">極限超馬越野與登山</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">聯絡資訊</a>
             </nav>
             
             <div class="nav-actions">
-                <span class="nav-last-updated" title="資料最後更新時間">
+                <span class="nav-last-updated" title="資料最後更新時間" data-i18n-title="nav_updated_title">
                     <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-09-16 12:30
                 </span>
+                <button id="langToggle" class="lang-toggle-btn" aria-label="切換語言 / Switch Language" title="切換語言 / Switch Language">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
                 <button id="themeToggle" class="theme-toggle-btn" aria-label="切換主題">
                     <i class="fa-solid fa-sun icon-sun"></i>
                     <i class="fa-solid fa-moon icon-moon"></i>
@@ -64,22 +68,22 @@
                         <span class="hero-badge run-badge"><i class="fa-solid fa-person-running"></i> Ultra Runner</span>
                     </div>
                     
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n-html="hero_title">
                         探索極限的<br>
                         <span class="text-gradient">跨界鏈結者</span>
                     </h1>
                     
-                    <h2 class="hero-subtitle">Masa Hsin-Lung Tu 杜信龍</h2>
+                    <h2 class="hero-subtitle" data-i18n="hero_subtitle">Masa Hsin-Lung Tu 杜信龍</h2>
                     
-                    <p class="hero-description">
+                    <p class="hero-description" data-i18n-html="hero_desc">
                         在<strong>半導體</strong>的微米世界裡，我是擁有 20 餘年經驗的射頻工程與 NPI 專家，用數據與六標準差追尋完美的晶片良率；<br>
                         在<strong>台語文學</strong>的瀚海星空中，我是獲臺灣文學金典獎首獎的作家，用母語的字句雕琢土地的溫度與歷史；<br>
                         在<strong>極限越野與超馬</strong>的泥濘山路中，我是用雙腳完成了 85 場賽事的行者，在無盡的呼吸與心跳中體會生命的純粹。
                     </p>
                     
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">與我聯絡 <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#tech" class="btn btn-secondary scroll-to-tabs" data-tab="tech">瀏覽專業經歷</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n-html="hero_btn_contact">與我聯絡 <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#tech" class="btn btn-secondary scroll-to-tabs" data-tab="tech" data-i18n="hero_btn_experience">瀏覽專業經歷</a>
                     </div>
                 </div>
                 
@@ -114,42 +118,42 @@
                                                 <img src="assets/images/badge_mstar.jpg" alt="MStar" class="badge-stack-img">
                                                 <img src="assets/images/badge_foxconn.jpg" alt="Foxconn" class="badge-stack-img">
                                             </div>
-                                            <span><i class="fa-solid fa-id-badge"></i> 歷年工作識別證</span>
+                                            <span><i class="fa-solid fa-id-badge"></i> <span data-i18n="card_badges_btn">歷年工作識別證</span></span>
                                         </div>
                                         <span class="badge-pill-count" id="frontBadgeCountText">3 張 <i class="fa-solid fa-expand"></i></span>
                                     </div>
-                                    <div class="card-hint">
+                                    <div class="card-hint" data-i18n-html="card_front_hint">
                                         <i class="fa-solid fa-rotate"></i> 點擊翻面查看快速數據
                                     </div>
                                 </div>
                                 <div class="card-back">
-                                    <h3>極限數據總覽</h3>
+                                    <h3 data-i18n="card_back_title">極限數據總覽</h3>
                                     <div class="stats-mini-grid">
                                         <div class="mini-stat-item">
                                             <span class="mini-stat-num">20+</span>
-                                            <span class="mini-stat-label">工程資歷 (年)</span>
+                                            <span class="mini-stat-label" data-i18n="card_stat_exp">工程資歷 (年)</span>
                                         </div>
                                         <div class="mini-stat-item">
                                             <span class="mini-stat-num">25+</span>
-                                            <span class="mini-stat-label">專利發明 (件)</span>
+                                            <span class="mini-stat-label" data-i18n="card_stat_patents">專利發明 (件)</span>
                                         </div>
                                         <div class="mini-stat-item">
                                             <span class="mini-stat-num">9</span>
-                                            <span class="mini-stat-label">出版著作 (本)</span>
+                                            <span class="mini-stat-label" data-i18n="card_stat_books">出版著作 (本)</span>
                                         </div>
                                         <div class="mini-stat-item">
                                             <span class="mini-stat-num">85</span>
-                                            <span class="mini-stat-label">完成賽事 (場)</span>
+                                            <span class="mini-stat-label" data-i18n="card_stat_races">完成賽事 (場)</span>
                                         </div>
                                     </div>
                                     <div class="special-achievements">
-                                        <div class="achievement-pill">
+                                        <div class="achievement-pill" data-i18n-html="card_achieve_lit">
                                             <i class="fa-solid fa-award"></i> 金典獎台語創作首獎
                                         </div>
-                                        <div class="achievement-pill">
+                                        <div class="achievement-pill" data-i18n-html="card_achieve_blood">
                                             <i class="fa-solid fa-heart-pulse"></i> 100+ 次熱血捐血
                                         </div>
-                                        <div class="achievement-pill">
+                                        <div class="achievement-pill" data-i18n-html="card_achieve_emt">
                                             <i class="fa-solid fa-kit-medical"></i> EMT-1 救護技術員
                                         </div>
                                     </div>
@@ -160,11 +164,11 @@
                                                 <img src="assets/images/badge_mstar.jpg" alt="MStar" class="badge-stack-img">
                                                 <img src="assets/images/badge_foxconn.jpg" alt="Foxconn" class="badge-stack-img">
                                             </div>
-                                            <span><i class="fa-solid fa-id-badge"></i> 歷年工作識別證</span>
+                                            <span><i class="fa-solid fa-id-badge"></i> <span data-i18n="card_badges_btn">歷年工作識別證</span></span>
                                         </div>
                                         <span class="badge-pill-count" id="badgeCountText">3 張 <i class="fa-solid fa-chevron-right"></i></span>
                                     </div>
-                                    <div class="card-hint">
+                                    <div class="card-hint" data-i18n-html="card_back_hint">
                                         <i class="fa-solid fa-rotate"></i> 點擊翻回正面
                                     </div>
                                 </div>
@@ -184,15 +188,15 @@
                 <div class="tabs-nav" id="mainTabNav">
                     <button class="tab-btn active" data-tab="tech">
                         <i class="fa-solid fa-microchip"></i>
-                        <span>半導體與科技</span>
+                        <span data-i18n="tab_tech">半導體與科技</span>
                     </button>
                     <button class="tab-btn" data-tab="lit">
                         <i class="fa-solid fa-pen-nib"></i>
-                        <span>台語文學創作</span>
+                        <span data-i18n="tab_lit">台語文學創作</span>
                     </button>
                     <button class="tab-btn" data-tab="running">
                         <i class="fa-solid fa-person-running"></i>
-                        <span>極限超馬越野與登山</span>
+                        <span data-i18n="tab_running">極限超馬越野與登山</span>
                     </button>
                 </div>
             </div>
@@ -524,19 +528,19 @@
             <!-- LITERATURE TAB -->
             <div class="tab-content" id="lit">
                 <div class="section-header">
-                    <h2>台語文學與母語創作</h2>
-                    <p>筆名「澹露水/凍露水」、「pháiⁿ-gín-á Oan-lí-siā」，長年耕耘台語現代詩、散文與小說，致力推廣母語書寫與閱讀，深信「說寫母語是人生最大的投資」。</p>
+                    <h2 data-i18n="lit_header_title">台語文學與母語創作</h2>
+                    <p data-i18n="lit_header_desc">筆名「澹露水/凍露水」、「pháiⁿ-gín-á Oan-lí-siā」，長年耕耘台語現代詩、散文與小說，致力推廣母語書寫與閱讀，深信「說寫母語是人生最大的投資」。</p>
                 </div>
 
                 <!-- Published Books Showcase -->
                 <div class="lit-sub-section">
                     <div class="sub-section-header-flex">
-                        <h3 class="sub-section-title" style="margin: 0;"><i class="fa-solid fa-book-open"></i> 出版著作 (已出版 9 本書)</h3>
-                        <button type="button" class="btn btn-mini btn-toggle-all" id="toggleAllBooksBtn" onclick="toggleAllBooks()" aria-expanded="false" title="展開或收合全部書籍簡介與購書連結">
+                        <h3 class="sub-section-title" style="margin: 0;" data-i18n-html="lit_books_title"><i class="fa-solid fa-book-open"></i> 出版著作 (已出版 9 本書)</h3>
+                        <button type="button" class="btn btn-mini btn-toggle-all" id="toggleAllBooksBtn" onclick="toggleAllBooks()" aria-expanded="false" title="展開或收合全部書籍簡介與購書連結" data-i18n-html="lit_books_expand_all">
                             <i class="fa-solid fa-angles-down"></i> 全部展開
                         </button>
                     </div>
-                    <p class="sub-section-intro">涵蓋兒童繪本、台語長篇小說與台語現代詩集，將對這片土地的歷史關懷與生活寫照化為溫柔而鋒利的台文字句。</p>
+                    <p class="sub-section-intro" data-i18n="lit_books_intro">涵蓋兒童繪本、台語長篇小說與台語現代詩集，將對這片土地的歷史關懷與生活寫照化為溫柔而鋒利的台文字句。</p>
                     
                     <div class="books-showcase-grid" id="booksGrid">
                         <!-- Loaded dynamically by JS -->
@@ -546,7 +550,7 @@
                 <!-- Literature Awards -->
                 <div class="lit-sub-section">
                     <div class="lecture-toggle-header" id="awardsToggleBtn" onclick="toggleSection('awardsToggleBtn','awardsCollapsible')" aria-expanded="false">
-                        <h3 class="sub-section-title" style="margin:0;"><i class="fa-solid fa-trophy"></i> 文學獎得獎歷程</h3>
+                        <h3 class="sub-section-title" style="margin:0;" data-i18n-html="lit_awards_title"><i class="fa-solid fa-trophy"></i> 文學獎得獎歷程</h3>
                         <span class="lecture-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="lecture-collapsible" id="awardsCollapsible">
@@ -559,17 +563,17 @@
                 <!-- Lecture Experiences -->
                 <div class="lit-sub-section">
                     <div class="lecture-toggle-header" id="lectureToggleBtn" onclick="toggleSection('lectureToggleBtn','lectureCollapsible')" aria-expanded="false">
-                        <h3 class="sub-section-title" style="margin:0;"><i class="fa-solid fa-chalkboard-user"></i> 講座經歷 <span id="lectureCountBadge" class="lecture-count-badge"></span></h3>
+                        <h3 class="sub-section-title" style="margin:0;"><span data-i18n-html="lit_lectures_title"><i class="fa-solid fa-chalkboard-user"></i> 講座經歷</span> <span id="lectureCountBadge" class="lecture-count-badge"></span></h3>
                         <span class="lecture-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="lecture-collapsible" id="lectureCollapsible">
-                        <p class="sub-section-intro">受邀至各書局、文學館及大專院校，分享台語創作經驗與推廣母語學習。</p>
+                        <p class="sub-section-intro" data-i18n="lit_lectures_intro">受邀至各書局、文學館及大專院校，分享台語創作經驗與推廣母語學習。</p>
                         <div class="table-responsive">
                             <table class="lecture-table">
                                 <thead>
                                     <tr>
-                                        <th>講座主題 / 主辦單位</th>
-                                        <th>日期</th>
+                                        <th data-i18n="lit_th_lecture_topic">講座主題 / 主辦單位</th>
+                                        <th data-i18n="lit_th_lecture_date">日期</th>
                                     </tr>
                                 </thead>
                                 <tbody id="lecturesTableBody">
@@ -583,11 +587,11 @@
                 <!-- Media Talks & Lecture Videos -->
                 <div class="lit-sub-section">
                     <div class="lecture-toggle-header" id="videoToggleBtn" onclick="toggleSection('videoToggleBtn','videoCollapsible')" aria-expanded="false">
-                        <h3 class="sub-section-title" style="margin:0;"><i class="fa-solid fa-video"></i> 音影講堂：演講、母語分享與得獎感言</h3>
+                        <h3 class="sub-section-title" style="margin:0;" data-i18n-html="lit_video_title"><i class="fa-solid fa-video"></i> 音影講堂：演講、母語分享與得獎感言</h3>
                         <span class="lecture-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
                     <div class="lecture-collapsible" id="videoCollapsible">
-                        <p class="sub-section-intro">透過講座、廣播節目與音樂創作，讓台語不只是說出口，更能成為文學、思想與音樂的載體。</p>
+                        <p class="sub-section-intro" data-i18n="lit_video_intro">透過講座、廣播節目與音樂創作，讓台語不只是說出口，更能成為文學、思想與音樂的載體。</p>
                         
                         <!-- Special Feature: GM Lyricist -->
                         <div class="lyricist-card">
@@ -595,9 +599,9 @@
                                 <i class="fa-solid fa-music"></i>
                             </div>
                             <div class="lyricist-content">
-                                <h4>金曲獲獎作品合作詞人</h4>
-                                <p><strong>2016 廖士賢 -【有魂無體】作詞：杜信龍</strong>。本作品以極具哲學感與畫面張力的台語詞作，與金曲獎常客廖士賢老師跨界聯手，描繪社會底層與靈魂的深層對話，將母語之美推向主流音樂殿堂。</p>
-                                <a href="https://www.youtube.com/watch?v=w2ZjMANIK8Y" target="_blank" class="btn btn-mini"><i class="fa-solid fa-circle-play"></i> 線上聆聽歌曲</a>
+                                <h4 data-i18n="lit_gm_title">金曲獲獎作品合作詞人</h4>
+                                <p data-i18n-html="lit_gm_desc"><strong>2016 廖士賢 -【有魂無體】作詞：杜信龍</strong>。本作品以極具哲學感與畫面張力的台語詞作，與金曲獎常客廖士賢老師跨界聯手，描繪社會底層與靈魂的深層對話，將母語之美推向主流音樂殿堂。</p>
+                                <a href="https://www.youtube.com/watch?v=w2ZjMANIK8Y" target="_blank" class="btn btn-mini" data-i18n-html="lit_gm_btn"><i class="fa-solid fa-circle-play"></i> 線上聆聽歌曲</a>
                             </div>
                         </div>
 
@@ -611,8 +615,8 @@
             <!-- RUNNING TAB -->
             <div class="tab-content" id="running">
                 <div class="section-header">
-                    <h2>極限超馬越野與登山足跡</h2>
-                    <p>雙腳是我的畫筆，大地是我的畫布。累計已完成了 85 場長距離馬拉松，包含 11 場超馬與險峻的百公里高難度越野挑戰，從路跑的節律中淬煉出人生的專注與毅力。</p>
+                    <h2 data-i18n="run_header_title">極限超馬越野與登山足跡</h2>
+                    <p data-i18n="run_header_desc">雙腳是我的畫筆，大地是我的畫布。累計已完成了 85 場長距離馬拉松，包含 11 場超馬與險峻的百公里高難度越野挑戰，從路跑的節律中淬煉出人生的專注與毅力。</p>
                 </div>
 
                 <!-- Running stats -->
@@ -621,35 +625,35 @@
                         <span class="run-stat-icon"><i class="fa-solid fa-shoe-prints"></i></span>
                         <div class="run-stat-info">
                             <span class="run-stat-num" id="runCount">85</span>
-                            <span class="run-stat-lbl">已完賽場次</span>
+                            <span class="run-stat-lbl" data-i18n="run_stat_races">已完賽場次</span>
                         </div>
                     </div>
                     <div class="run-stat-card">
                         <span class="run-stat-icon"><i class="fa-solid fa-mountain"></i></span>
                         <div class="run-stat-info">
                             <span class="run-stat-num">11</span>
-                            <span class="run-stat-lbl">超極馬拉松 / 越野挑戰</span>
+                            <span class="run-stat-lbl" data-i18n="run_stat_ultra">超極馬拉松 / 越野挑戰</span>
                         </div>
                     </div>
                     <div class="run-stat-card">
                         <span class="run-stat-icon"><i class="fa-solid fa-route"></i></span>
                         <div class="run-stat-info">
                             <span class="run-stat-num">21</span>
-                            <span class="run-stat-lbl">半程馬拉松</span>
+                            <span class="run-stat-lbl" data-i18n="run_stat_half">半程馬拉松</span>
                         </div>
                     </div>
                     <div class="run-stat-card">
                         <span class="run-stat-icon"><i class="fa-solid fa-circle-up"></i></span>
                         <div class="run-stat-info">
                             <span class="run-stat-num">4,100m+</span>
-                            <span class="run-stat-lbl">越野最大單場爬升</span>
+                            <span class="run-stat-lbl" data-i18n="run_stat_gain">越野最大單場爬升</span>
                         </div>
                     </div>
                     <div class="run-stat-card">
                         <span class="run-stat-icon"><i class="fa-solid fa-mountain-sun"></i></span>
                         <div class="run-stat-info">
                             <span class="run-stat-num">35</span>
-                            <span class="run-stat-lbl">座已登頂百岳<br><small class="text-muted">(2010 - 2016)</small></span>
+                            <span class="run-stat-lbl" data-i18n-html="run_stat_baiyue">座已登頂百岳<br><small class="text-muted">(2010 - 2016)</small></span>
                         </div>
                     </div>
                 </div>
@@ -665,7 +669,7 @@
                         <img src="2025 xtrail 烏白.png" alt="2025 XTRAIL 越野跑 烏白" />
                     </div>
                     <div class="ultra-highlights-list">
-                        <h4><i class="fa-solid fa-star"></i> 指標性越野與極限賽事記錄</h4>
+                        <h4 data-i18n-html="run_highlights_title"><i class="fa-solid fa-star"></i> 指標性越野與極限賽事記錄</h4>
                         <ul>
                             <li><strong>2026 XTRAIL 100K 越野跑挑戰賽</strong>：實際完賽 94 公里，錶測累計爬升達 4000 公尺，耗時 19 小時 29 分。</li>
                             <li><strong>2025 跑山獸 75K 越野賽</strong>：實際完賽約 80 公里，累計爬升 4100 公尺，耗時 16 小時 36 分。</li>
@@ -678,8 +682,8 @@
 
                 <!-- Mountain Climbing Map Section -->
                 <div class="running-sub-section">
-                    <h3 class="sub-section-title"><i class="fa-solid fa-mountain-sun"></i> 台灣百岳足跡地圖 (2010 - 2016)</h3>
-                    <p class="sub-section-intro">在投入越野跑與超馬之前，我自 2010 年至 2016 年間深入台灣高山，完成了 35 座台灣百岳的攀登與帶團足跡。下方地圖記錄了這些年來的山行歲月：</p>
+                    <h3 class="sub-section-title" data-i18n-html="run_map_baiyue_title"><i class="fa-solid fa-mountain-sun"></i> 台灣百岳足跡地圖 (2010 - 2016)</h3>
+                    <p class="sub-section-intro" data-i18n="run_map_baiyue_intro">在投入越野跑與超馬之前，我自 2010 年至 2016 年間深入台灣高山，完成了 35 座台灣百岳的攀登與帶團足跡。下方地圖記錄了這些年來的山行歲月：</p>
                     
                     <div class="map-iframe-container">
                         <iframe src="MOUNTAIN.html" title="我的台灣百岳足跡地圖"></iframe>
@@ -688,8 +692,8 @@
 
                 <!-- Running Tracks Map Section -->
                 <div class="running-sub-section">
-                    <h3 class="sub-section-title"><i class="fa-solid fa-person-running"></i> 台灣跑步足跡地圖 ( 2024-0227~now)</h3>
-                    <p class="sub-section-intro">記錄自 2024 年 2 月至今的所有公路路跑、馬拉松、越野超馬與戶外訓練足跡（已自動排除室內自行車與跑步機）。支援即時互動縮放、搜尋、多圖層切換與隨時匯入新 GPX 檔案：</p>
+                    <h3 class="sub-section-title" data-i18n-html="run_map_track_title"><i class="fa-solid fa-person-running"></i> 台灣跑步足跡地圖 ( 2024-0227~now)</h3>
+                    <p class="sub-section-intro" data-i18n="run_map_track_intro">記錄自 2024 年 2 月至今的所有公路路跑、馬拉松、越野超馬與戶外訓練足跡（已自動排除室內自行車與跑步機）。支援即時互動縮放、搜尋、多圖層切換與隨時匯入新 GPX 檔案：</p>
                     
                     <div class="map-iframe-container">
                         <iframe src="RUNNING_MAP.html" title="台灣跑步足跡地圖 ( 2024-0227~now)"></iframe>
@@ -698,21 +702,21 @@
 
                 <!-- Searchable / Filterable Race Ledger -->
                 <div class="running-sub-section">
-                    <h3 class="sub-section-title"><i class="fa-solid fa-table-list"></i> 85 場馬拉松賽事全紀錄</h3>
-                    <p class="sub-section-intro">歡迎使用下方搜尋與過濾器，查詢我自 2012 年起走過的所有馬拉松與越野跑足跡。</p>
+                    <h3 class="sub-section-title" data-i18n-html="run_ledger_title"><i class="fa-solid fa-table-list"></i> 85 場馬拉松賽事全紀錄</h3>
+                    <p class="sub-section-intro" data-i18n="run_ledger_intro">歡迎使用下方搜尋與過濾器，查詢我自 2012 年起走過的所有馬拉松與越野跑足跡。</p>
                     
                     <div class="ledger-control-panel">
                         <div class="search-box">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id="raceSearch" placeholder="輸入賽事名稱或年份 (例如：太魯閣、2024)...">
+                            <input type="text" id="raceSearch" placeholder="輸入賽事名稱或年份 (例如：太魯閣、2024)..." data-i18n-placeholder="run_search_placeholder">
                         </div>
                         <div class="filter-select-wrapper">
                             <select id="raceTypeFilter" aria-label="篩選賽事種類">
-                                <option value="all">所有類型</option>
-                                <option value="ultra">超極馬拉松/越野 (Ultra)</option>
-                                <option value="full">全馬 (Full Marathon)</option>
-                                <option value="half">半馬 (Half Marathon)</option>
-                                <option value="other">其它/短程 (Other)</option>
+                                <option value="all" data-i18n="run_filter_all">所有類型</option>
+                                <option value="ultra" data-i18n="run_filter_ultra">超極馬拉松/越野 (Ultra)</option>
+                                <option value="full" data-i18n="run_filter_full">全馬 (Full Marathon)</option>
+                                <option value="half" data-i18n="run_filter_half">半馬 (Half Marathon)</option>
+                                <option value="other" data-i18n="run_filter_other">其它/短程 (Other)</option>
                             </select>
                         </div>
                     </div>
@@ -721,11 +725,11 @@
                         <table class="race-table" id="raceTable">
                             <thead>
                                 <tr>
-                                    <th>編號</th>
-                                    <th>賽事名稱</th>
-                                    <th>舉辦日期</th>
-                                    <th>完賽時間</th>
-                                    <th>類型</th>
+                                    <th data-i18n="run_th_id">編號</th>
+                                    <th data-i18n="run_th_name">賽事名稱</th>
+                                    <th data-i18n="run_th_date">舉辦日期</th>
+                                    <th data-i18n="run_th_time">完賽時間</th>
+                                    <th data-i18n="run_th_type">類型</th>
                                 </tr>
                             </thead>
                             <tbody id="raceTableBody">
@@ -747,7 +751,7 @@
         <div class="container">
             <div class="collapsible-section">
                 <h2 class="extra-title text-center toggle-trigger">
-                    <span>社會責任與多維認證</span>
+                    <span data-i18n="extra_section_title">社會責任與多維認證</span>
                     <i class="fa-solid fa-chevron-down toggle-chevron" style="font-size: 1.5rem;"></i>
                 </h2>
                 <div class="collapsible-content">
@@ -855,14 +859,14 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info-block">
-                    <h2 style="margin-bottom: 16px;">與我鏈結 (聯絡資訊)</h2>
-                    <p>不論您是半導體工程師、資料科學家、台語文學同好、馬拉松跑者，或是對我出版的著作感興趣，都非常歡迎與我聯繫，共同探討跨界合作的無限可能。</p>
+                    <h2 style="margin-bottom: 16px;" data-i18n="contact_title">與我鏈結 (聯絡資訊)</h2>
+                    <p data-i18n="contact_intro">不論您是半導體工程師、資料科學家、台語文學同好、馬拉松跑者，或是對我出版的著作感興趣，都非常歡迎與我聯繫，共同探討跨界合作的無限可能。</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method-item">
                             <i class="fa-solid fa-envelope"></i>
                             <div>
-                                <h4>電子信箱</h4>
+                                <h4 data-i18n="contact_email">電子信箱</h4>
                                 <p><a href="mailto:masahltu0322@gmail.com">masahltu0322@gmail.com</a></p>
                             </div>
                         </div>
@@ -876,23 +880,23 @@
                         <div class="contact-method-item">
                             <i class="fa-solid fa-phone"></i>
                             <div>
-                                <h4>聯絡電話</h4>
+                                <h4 data-i18n="contact_phone">聯絡電話</h4>
                                 <p><a href="tel:+886929661278">+886 929-661278</a></p>
                             </div>
                         </div>
                         <div class="contact-method-item">
                             <i class="fa-solid fa-location-dot"></i>
                             <div>
-                                <h4>主要活動地點</h4>
-                                <p>台灣 台南市 (Tainan, Taiwan)</p>
+                                <h4 data-i18n="contact_location">主要活動地點</h4>
+                                <p data-i18n="contact_location_val">台灣 台南市 (Tainan, Taiwan)</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-links-block">
-                    <h3>其它動態</h3>
-                    <p>聆聽演講或是影片記錄：</p>
+                    <h3 data-i18n="contact_other_title">其它動態</h3>
+                    <p data-i18n="contact_other_intro">聆聽演講或是影片記錄：</p>
                     
                     <div class="social-links-grid">
                         <a href="https://www.youtube.com/@taibunexpo" target="_blank" class="social-btn yt-btn">
@@ -916,8 +920,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. </p>
-            <p class="footer-sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-16 12:30 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            <p data-i18n-html="footer_rights">&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. </p>
+            <p class="footer-sub" data-i18n-html="footer_sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-16 12:30 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
         </div>
     </footer>
 
@@ -926,8 +930,8 @@
         <div class="badges-modal-content">
             <div class="badges-modal-header">
                 <div>
-                    <h3 class="badges-modal-title"><i class="fa-solid fa-id-badge text-gradient"></i> 歷年工作識別證 (Career Badges)</h3>
-                    <p class="badges-modal-subtitle">20+ 年跨國大廠與半導體研發足跡之實體證件存檔</p>
+                    <h3 class="badges-modal-title" data-i18n-html="modal_badges_title"><i class="fa-solid fa-id-badge text-gradient"></i> 歷年工作識別證 (Career Badges)</h3>
+                    <p class="badges-modal-subtitle" data-i18n="modal_badges_sub">20+ 年跨國大廠與半導體研發足跡之實體證件存檔</p>
                 </div>
                 <button class="close-badges-modal-btn" id="closeBadgesModal" aria-label="關閉識別證視窗">&times;</button>
             </div>

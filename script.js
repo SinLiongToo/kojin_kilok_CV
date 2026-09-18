@@ -1490,6 +1490,289 @@ const VIDEOS_DATABASE = [
   }
 ];
 
+// --- Internationalization (i18n) Engine ---
+const I18N_DICT = {
+  "zh": {
+    "nav_about": "關於我",
+    "nav_tech": "半導體與科技",
+    "nav_lit": "台語文學創作",
+    "nav_running": "極限超馬越野與登山",
+    "nav_contact": "聯絡資訊",
+    "nav_updated_title": "資料最後更新時間",
+    "lang_toggle_text": "EN",
+    "theme_toggle_aria": "切換主題",
+
+    "hero_title": "探索極限的<br><span class=\"text-gradient\">跨界鏈結者</span>",
+    "hero_subtitle": "Masa Hsin-Lung Tu 杜信龍",
+    "hero_desc": "在<strong>半導體</strong>的微米世界裡，我是擁有 20 餘年經驗的射頻工程與 NPI 專家，用數據與六標準差追尋完美的晶片良率；<br>在<strong>台語文學</strong>的瀚海星空中，我是獲臺灣文學金典獎首獎的作家，用母語的字句雕琢土地的溫度與歷史；<br>在<strong>極限越野與超馬</strong>的泥濘山路中，我是用雙腳完成了 85 場賽事的行者，在無盡的呼吸與心跳中體會生命的純粹。",
+    "hero_btn_contact": "與我聯絡 <i class=\"fa-solid fa-arrow-right\"></i>",
+    "hero_btn_experience": "瀏覽專業經歷",
+
+    "card_badges_btn": "歷年工作識別證",
+    "card_badges_unit": "張",
+    "card_front_hint": "<i class=\"fa-solid fa-rotate\"></i> 點擊翻面查看快速數據",
+    "card_back_title": "極限數據總覽",
+    "card_stat_exp": "工程資歷 (年)",
+    "card_stat_patents": "專利發明 (件)",
+    "card_stat_books": "出版著作 (本)",
+    "card_stat_races": "完成賽事 (場)",
+    "card_achieve_lit": "<i class=\"fa-solid fa-award\"></i> 金典獎台語創作首獎",
+    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 100+ 次熱血捐血",
+    "card_achieve_emt": "<i class=\"fa-solid fa-kit-medical\"></i> EMT-1 救護技術員",
+    "card_back_hint": "<i class=\"fa-solid fa-rotate\"></i> 點擊翻回正面",
+
+    "tab_tech": "半導體與科技",
+    "tab_lit": "台語文學創作",
+    "tab_running": "極限超馬越野與登山",
+
+    // Literature Tab: Main & Subtitles Translated, Content Untouched
+    "lit_header_title": "台語文學與母語創作",
+    "lit_header_desc": "筆名「澹露水/凍露水」、「pháiⁿ-gín-á Oan-lí-siā」，長年耕耘台語現代詩、散文與小說，致力推廣母語書寫與閱讀，深信「說寫母語是人生最大的投資」。",
+    "lit_books_title": "<i class=\"fa-solid fa-book-open\"></i> 出版著作 (已出版 9 本書)",
+    "lit_books_expand_all": "<i class=\"fa-solid fa-angles-down\"></i> 全部展開",
+    "lit_books_collapse_all": "<i class=\"fa-solid fa-angles-up\"></i> 全部收合",
+    "lit_books_intro": "涵蓋兒童繪本、台語長篇小說與台語現代詩集，將對這片土地的歷史關懷與生活寫照化為溫柔而鋒利的台文字句。",
+    "lit_book_btn_expand": "簡介與購買連結",
+    "lit_book_btn_collapse": "收合簡介與連結",
+    "lit_book_paper_buy": "<i class=\"fa-solid fa-book\"></i> 紙本書購買：",
+    "lit_book_ebook_buy": "<i class=\"fa-solid fa-mobile-screen-button\"></i> 電子書購買：",
+    "lit_book_no_link": "<i class=\"fa-solid fa-clock\"></i> 目前購買：尚未。待補。",
+    "lit_awards_title": "<i class=\"fa-solid fa-trophy\"></i> 文學獎得獎歷程",
+    "lit_lectures_title": "<i class=\"fa-solid fa-chalkboard-user\"></i> 講座經歷",
+    "lit_lectures_intro": "受邀至各書局、文學館及大專院校，分享台語創作經驗與推廣母語學習。",
+    "lit_th_lecture_topic": "講座主題 / 主辦單位",
+    "lit_th_lecture_date": "日期",
+    "lit_video_title": "<i class=\"fa-solid fa-video\"></i> 音影講堂：演講、母語分享與得獎感言",
+    "lit_video_intro": "透過講座、廣播節目與音樂創作，讓台語不只是說出口，更能成為文學、思想與音樂的載體。",
+    "lit_gm_title": "金曲獲獎作品合作詞人",
+    "lit_gm_desc": "<strong>2016 廖士賢 -【有魂無體】作詞：杜信龍</strong>。本作品以極具哲學感與畫面張力的台語詞作，與金曲獎常客廖士賢老師跨界聯手，描繪社會底層與靈魂的深層對話，將母語之美推向主流音樂殿堂。",
+    "lit_gm_btn": "<i class=\"fa-solid fa-circle-play\"></i> 線上聆聽歌曲",
+
+    // Running & Trail Tab
+    "run_header_title": "極限超馬越野與登山足跡",
+    "run_header_desc": "雙腳是我的畫筆，大地是我的畫布。累計已完成了 85 場長距離馬拉松，包含 11 場超馬與險峻的百公里高難度越野挑戰，從路跑的節律中淬煉出人生的專注與毅力。",
+    "run_stat_races": "已完賽場次",
+    "run_stat_ultra": "超極馬拉松 / 越野挑戰",
+    "run_stat_half": "半程馬拉松",
+    "run_stat_gain": "越野最大單場爬升",
+    "run_stat_baiyue": "座已登頂百岳<br><small class=\"text-muted\">(2010 - 2016)</small>",
+    "run_highlights_title": "<i class=\"fa-solid fa-star\"></i> 指標性越野與極限賽事記錄",
+    "run_map_baiyue_title": "<i class=\"fa-solid fa-mountain-sun\"></i> 台灣百岳足跡地圖 (2010 - 2016)",
+    "run_map_baiyue_intro": "在投入越野跑與超馬之前，我自 2010 年至 2016 年間深入台灣高山，完成了 35 座台灣百岳的攀登與帶團足跡。下方地圖記錄了這些年來的山行歲月：",
+    "run_map_track_title": "<i class=\"fa-solid fa-person-running\"></i> 台灣跑步足跡地圖 ( 2024-0227~now)",
+    "run_map_track_intro": "記錄自 2024 年 2 月至今的所有公路路跑、馬拉松、越野超馬與戶外訓練足跡（已自動排除室內自行車與跑步機）。支援即時互動縮放、搜尋、多圖層切換與隨時匯入新 GPX 檔案：",
+    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 85 場馬拉松賽事全紀錄",
+    "run_ledger_intro": "歡迎使用下方搜尋與過濾器，查詢我自 2012 年起走過的所有馬拉松與越野跑足跡。",
+    "run_search_placeholder": "輸入賽事名稱或年份 (例如：太魯閣、2024)...",
+    "run_filter_all": "所有類型",
+    "run_filter_ultra": "超極馬拉松/越野 (Ultra)",
+    "run_filter_full": "全馬 (Full Marathon)",
+    "run_filter_half": "半馬 (Half Marathon)",
+    "run_filter_other": "其它/短程 (Other)",
+    "run_th_id": "編號",
+    "run_th_name": "賽事名稱",
+    "run_th_date": "舉辦日期",
+    "run_th_time": "完賽時間",
+    "run_th_type": "類型",
+    "run_empty": "無符合條件的賽事記錄",
+
+    // Extra Section
+    "extra_section_title": "社會責任與多維認證",
+
+    // Contact Section
+    "contact_title": "與我鏈結 (聯絡資訊)",
+    "contact_intro": "不論您是半導體工程師、資料科學家、台語文學同好、馬拉松跑者，或是對我出版的著作感興趣，都非常歡迎與我聯繫，共同探討跨界合作的無限可能。",
+    "contact_email": "電子信箱",
+    "contact_phone": "聯絡電話",
+    "contact_location": "主要活動地點",
+    "contact_location_val": "台灣 台南市 (Tainan, Taiwan)",
+    "contact_other_title": "其它動態",
+    "contact_other_intro": "聆聽演講或是影片記錄：",
+
+    // Footer
+    "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-09-16 12:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+
+    // Modal
+    "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
+    "modal_badges_sub": "20+ 年跨國大廠與半導體研發足跡之實體證件存檔",
+    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> 點擊放大"
+  },
+  "en": {
+    "nav_about": "About",
+    "nav_tech": "Tech & Engineering",
+    "nav_lit": "Taiwanese Literature",
+    "nav_running": "Ultra Marathon & Trail",
+    "nav_contact": "Contact",
+    "nav_updated_title": "Last Updated",
+    "lang_toggle_text": "中文",
+    "theme_toggle_aria": "Toggle Theme",
+
+    "hero_title": "Exploring Limits<br><span class=\"text-gradient\">Cross-Domain Boundary Crosser</span>",
+    "hero_subtitle": "Masa Hsin-Lung Tu",
+    "hero_desc": "In the micro-world of <strong>semiconductors</strong>, I am an RF and NPI specialist with 20+ years of experience, pursuing chip yield perfection through data and Six Sigma;<br>In the boundless cosmos of <strong>Taiwanese literature</strong>, I am a Taiwan Literature Award-winning author, sculpting the history and warmth of our land through mother-tongue prose;<br>On the muddy trails of <strong>extreme ultra-marathons</strong>, I am an endurance athlete having completed 85 races, embracing life's purity with every breath and heartbeat.",
+    "hero_btn_contact": "Get in Touch <i class=\"fa-solid fa-arrow-right\"></i>",
+    "hero_btn_experience": "Explore Experience",
+
+    "card_badges_btn": "Career Badges",
+    "card_badges_unit": "Badges",
+    "card_front_hint": "<i class=\"fa-solid fa-rotate\"></i> Click card to view key metrics",
+    "card_back_title": "Key Metrics Overview",
+    "card_stat_exp": "Years in Tech",
+    "card_stat_patents": "Patents Granted",
+    "card_stat_books": "Published Books",
+    "card_stat_races": "Races Completed",
+    "card_achieve_lit": "<i class=\"fa-solid fa-award\"></i> Taiwan Literature Award Winner",
+    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 100+ Blood Donations",
+    "card_achieve_emt": "<i class=\"fa-solid fa-kit-medical\"></i> Certified EMT-1",
+    "card_back_hint": "<i class=\"fa-solid fa-rotate\"></i> Click to flip back",
+
+    "tab_tech": "Semiconductor & Tech",
+    "tab_lit": "Taiwanese Literature",
+    "tab_running": "Ultra Marathon & Trail",
+
+    // Literature Tab: Main & Subtitles Translated, Content Untouched
+    "lit_header_title": "Taiwanese Literature & Mother Tongue Writing",
+    "lit_header_desc": "Pen name \"Tâm-lō͘-chúi\" / \"pháiⁿ-gín-á Oan-lí-siā\". Devoted for years to modern Taiwanese poetry, prose, and novels, passionately advocating mother tongue literacy with the conviction: \"Speaking and writing in one's mother tongue is life's greatest investment.\"",
+    "lit_books_title": "<i class=\"fa-solid fa-book-open\"></i> Published Works (9 Books Published)",
+    "lit_books_expand_all": "<i class=\"fa-solid fa-angles-down\"></i> Expand All",
+    "lit_books_collapse_all": "<i class=\"fa-solid fa-angles-up\"></i> Collapse All",
+    "lit_books_intro": "Encompassing children's picture books, full-length Taiwanese novels, and modern Taiwanese poetry collections—transforming historical consciousness and everyday observations into poignant Taiwanese expressions.",
+    "lit_book_btn_expand": "Synopsis & Purchase Links",
+    "lit_book_btn_collapse": "Collapse Details",
+    "lit_book_paper_buy": "<i class=\"fa-solid fa-book\"></i> Print Edition:",
+    "lit_book_ebook_buy": "<i class=\"fa-solid fa-mobile-screen-button\"></i> E-Book Edition:",
+    "lit_book_no_link": "<i class=\"fa-solid fa-clock\"></i> Purchase links: Coming soon.",
+    "lit_awards_title": "<i class=\"fa-solid fa-trophy\"></i> Literary Awards & Honors",
+    "lit_lectures_title": "<i class=\"fa-solid fa-chalkboard-user\"></i> Invited Lectures & Talks",
+    "lit_lectures_intro": "Invited by bookstores, literature museums, and universities to share literary experiences and promote mother tongue learning.",
+    "lit_th_lecture_topic": "Lecture Topic / Host Organization",
+    "lit_th_lecture_date": "Date",
+    "lit_video_title": "<i class=\"fa-solid fa-video\"></i> Audiovisual Lectures: Talks, Speeches & Mother Tongue Sharing",
+    "lit_video_intro": "Through lectures, radio broadcasts, and musical collaborations, empowering the Taiwanese language as a profound medium for literature, thought, and melody.",
+    "lit_gm_title": "Golden Melody Award-Winning Lyricist Collaboration",
+    "lit_gm_desc": "<strong>2016 Sam Liao - [Soul Without Body] Lyrics: Masa Hsin-Lung Tu</strong>. Collaborating with Golden Melody winner Sam Liao, this philosophical and evocative Taiwanese lyric portrays deep dialogues with society's margins and the soul, elevating mother tongue artistry onto the mainstream musical stage.",
+    "lit_gm_btn": "<i class=\"fa-solid fa-circle-play\"></i> Listen Online",
+
+    // Running & Trail Tab
+    "run_header_title": "Extreme Ultra Trail, Marathon & Mountaineering",
+    "run_header_desc": "Feet are my brushes, the earth is my canvas. Having completed 85 long-distance marathons, including 11 ultra-marathons and grueling 100K mountain trail challenges, distilling focus and perseverance through running rhythms.",
+    "run_stat_races": "Races Completed",
+    "run_stat_ultra": "Ultra Marathons & Trails",
+    "run_stat_half": "Half Marathons",
+    "run_stat_gain": "Max Trail Elevation Gain",
+    "run_stat_baiyue": "Baiyue Summits Conquered<br><small class=\"text-muted\">(2010 - 2016)</small>",
+    "run_highlights_title": "<i class=\"fa-solid fa-star\"></i> Landmark Ultra & Extreme Races",
+    "run_map_baiyue_title": "<i class=\"fa-solid fa-mountain-sun\"></i> Taiwan Baiyue Hiking Map (2010 - 2016)",
+    "run_map_baiyue_intro": "Prior to ultra running, I explored Taiwan's high peaks between 2010 and 2016, summiting 35 Baiyue mountains and leading alpine expeditions. The map below records these mountaineering years:",
+    "run_map_track_title": "<i class=\"fa-solid fa-person-running\"></i> Taiwan Running Tracks Map (2024 - Present)",
+    "run_map_track_intro": "Recording all road runs, marathons, trail ultras, and outdoor workouts from February 2024 to present (indoor cycling/treadmills excluded). Supports interactive zoom, search, layer toggling, and new GPX imports:",
+    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 85 Marathons & Ultras Complete Ledger",
+    "run_ledger_intro": "Use the search box and filter below to query all marathon and trail races completed since 2012.",
+    "run_search_placeholder": "Search race name or year (e.g., Taroko, 2024)...",
+    "run_filter_all": "All Categories",
+    "run_filter_ultra": "Ultra Marathon / Trail (Ultra)",
+    "run_filter_full": "Full Marathon",
+    "run_filter_half": "Half Marathon",
+    "run_filter_other": "Other / Short Course",
+    "run_th_id": "No.",
+    "run_th_name": "Race Name",
+    "run_th_date": "Date",
+    "run_th_time": "Finish Time",
+    "run_th_type": "Category",
+    "run_empty": "No race records found matching criteria",
+
+    // Extra Section
+    "extra_section_title": "Social Responsibility & Diverse Certifications",
+
+    // Contact Section
+    "contact_title": "Get In Touch (Contact Information)",
+    "contact_intro": "Whether you are a semiconductor engineer, data scientist, fellow Taiwanese literature enthusiast, marathon runner, or interested in my published works, feel free to reach out to explore cross-domain collaborations.",
+    "contact_email": "Email",
+    "contact_phone": "Phone",
+    "contact_location": "Primary Location",
+    "contact_location_val": "Tainan, Taiwan",
+    "contact_other_title": "Other Channels & Media",
+    "contact_other_intro": "Speeches, media interviews, and video records:",
+
+    // Footer
+    "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-09-16 12:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+
+    // Modal
+    "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
+    "modal_badges_sub": "Physical badge archive documenting 20+ years of multinational semiconductor R&D journey",
+    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> Click to expand"
+  }
+};
+
+let currentLang = localStorage.getItem("masa_cv_lang") || "zh";
+
+function setLanguage(lang) {
+    if (!I18N_DICT[lang]) lang = "zh";
+    currentLang = lang;
+    localStorage.setItem("masa_cv_lang", lang);
+    document.documentElement.lang = lang === "en" ? "en" : "zh-TW";
+    
+    // Update elements with data-i18n
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (I18N_DICT[lang] && I18N_DICT[lang][key] !== undefined) {
+            el.textContent = I18N_DICT[lang][key];
+        }
+    });
+
+    // Update elements with data-i18n-html
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+        const key = el.getAttribute("data-i18n-html");
+        if (I18N_DICT[lang] && I18N_DICT[lang][key] !== undefined) {
+            el.innerHTML = I18N_DICT[lang][key];
+        }
+    });
+
+    // Update elements with data-i18n-placeholder
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (I18N_DICT[lang] && I18N_DICT[lang][key] !== undefined) {
+            el.placeholder = I18N_DICT[lang][key];
+        }
+    });
+
+    // Update elements with data-i18n-title
+    document.querySelectorAll("[data-i18n-title]").forEach(el => {
+        const key = el.getAttribute("data-i18n-title");
+        if (I18N_DICT[lang] && I18N_DICT[lang][key] !== undefined) {
+            el.title = I18N_DICT[lang][key];
+        }
+    });
+
+    // Update language toggle button text
+    const langTextEl = document.getElementById("langText");
+    if (langTextEl) {
+        langTextEl.textContent = I18N_DICT[lang]["lang_toggle_text"];
+    }
+
+    // Refresh dynamic components
+    if (typeof renderBadges === "function") renderBadges();
+    if (typeof renderLectures === "function") renderLectures();
+    if (typeof renderBooks === "function") renderBooks();
+    if (typeof renderRaceTable === "function") renderRaceTable();
+    if (typeof renderRacePagination === "function") renderRacePagination();
+}
+
+function initLanguage() {
+    const langToggleBtn = document.getElementById("langToggle");
+    const savedLang = localStorage.getItem("masa_cv_lang") || "zh";
+    setLanguage(savedLang);
+
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener("click", () => {
+            const nextLang = currentLang === "zh" ? "en" : "zh";
+            setLanguage(nextLang);
+        });
+    }
+}
+
 // --- State Management ---
 let currentRacePage = 1;
 const racesPerPage = 12;
@@ -1498,6 +1781,7 @@ let filteredRaces = [...RACES_DATABASE];
 // --- Initialization ---
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
+    initLanguage();
     initTabNavigation();
     initProfileCardFlip();
     initMobileMenu();
@@ -1757,6 +2041,13 @@ function renderBooks() {
     
     booksGrid.innerHTML = "";
     
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
+    const paperBuyLabel = isEn ? '<i class="fa-solid fa-book"></i> Print Edition:' : '<i class="fa-solid fa-book"></i> 紙本書購買：';
+    const ebookBuyLabel = isEn ? '<i class="fa-solid fa-mobile-screen-button"></i> E-Book Edition:' : '<i class="fa-solid fa-mobile-screen-button"></i> 電子書購買：';
+    const noBuyLabel = isEn ? '<div style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;"><i class="fa-solid fa-clock"></i> Purchase links: Coming soon.</div>' : '<div style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;"><i class="fa-solid fa-clock"></i> 目前購買：尚未。待補。</div>';
+    const toggleLabel = isEn ? "Synopsis & Purchase Links" : "簡介與購買連結";
+    const toggleTitle = isEn ? "Click to expand/collapse synopsis and purchase links" : "點擊展開/收合詳細簡介與購書連結";
+    
     BOOKS_DATABASE.forEach((b, index) => {
         const bookCard = document.createElement("div");
         bookCard.className = "book-card";
@@ -1765,7 +2056,7 @@ function renderBooks() {
         // Build paper book links
         let paperLinksHtml = "";
         if (b.paperLinks && Object.keys(b.paperLinks).length > 0) {
-            paperLinksHtml += `<div style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;"><i class="fa-solid fa-book"></i> 紙本書購買：</div>`;
+            paperLinksHtml += `<div style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px;">${paperBuyLabel}</div>`;
             paperLinksHtml += `<div class="book-purchase-links">`;
             for (const [platform, link] of Object.entries(b.paperLinks)) {
                 if (platform === "博客來") {
@@ -1780,7 +2071,7 @@ function renderBooks() {
         // Build ebook links
         let ebookLinksHtml = "";
         if (b.ebookLinks && Object.keys(b.ebookLinks).length > 0) {
-            ebookLinksHtml += `<div style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-top: 10px; margin-bottom: 6px;"><i class="fa-solid fa-mobile-screen-button"></i> 電子書購買：</div>`;
+            ebookLinksHtml += `<div style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-top: 10px; margin-bottom: 6px;">${ebookBuyLabel}</div>`;
             ebookLinksHtml += `<div class="book-purchase-links">`;
             for (const [platform, link] of Object.entries(b.ebookLinks)) {
                 if (platform === "讀墨" || platform === "讀墨 (Ebook)") {
@@ -1789,7 +2080,7 @@ function renderBooks() {
                     ebookLinksHtml += `<a href="${link}" target="_blank" class="book-link">${platform}</a>`;
                 }
             }
-            ebookLinksHtml += `</div>`;
+            paperLinksHtml += `</div>`;
         }
         
         bookCard.innerHTML = `
@@ -1804,8 +2095,8 @@ function renderBooks() {
                 </div>
             </div>
             
-            <button type="button" class="book-toggle-btn" onclick="toggleBookCard(${index})" aria-expanded="false" title="點擊展開/收合詳細簡介與購書連結">
-                <span class="book-toggle-label">簡介與購買連結</span>
+            <button type="button" class="book-toggle-btn" onclick="toggleBookCard(${index})" aria-expanded="false" title="${toggleTitle}">
+                <span class="book-toggle-label">${toggleLabel}</span>
                 <span class="book-toggle-icon"><i class="fa-solid fa-chevron-down"></i></span>
             </button>
             
@@ -1813,7 +2104,7 @@ function renderBooks() {
                 <p class="book-desc">${b.desc}</p>
                 <div class="book-target"><i class="fa-solid fa-circle-info"></i> ${b.target}</div>
                 <div class="book-links-wrapper">
-                    ${paperLinksHtml || ebookLinksHtml ? paperLinksHtml + ebookLinksHtml : '<div style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;"><i class="fa-solid fa-clock"></i> 目前購買：尚未。待補。</div>'}
+                    ${paperLinksHtml || ebookLinksHtml ? paperLinksHtml + ebookLinksHtml : noBuyLabel}
                 </div>
             </div>
         `;
@@ -1836,15 +2127,16 @@ function toggleBookCard(index) {
     const isExpanded = card.classList.contains("is-expanded");
     const toggleBtn = card.querySelector(".book-toggle-btn");
     const label = card.querySelector(".book-toggle-label");
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
     
     if (isExpanded) {
         card.classList.remove("is-expanded");
         if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
-        if (label) label.textContent = "簡介與購買連結";
+        if (label) label.textContent = isEn ? "Synopsis & Purchase Links" : "簡介與購買連結";
     } else {
         card.classList.add("is-expanded");
         if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "true");
-        if (label) label.textContent = "收合簡介與連結";
+        if (label) label.textContent = isEn ? "Collapse Details" : "收合簡介與連結";
     }
     updateToggleAllBooksBtn();
 }
@@ -1856,6 +2148,7 @@ function toggleAllBooks() {
     
     const allExpanded = Array.from(cards).every(c => c.classList.contains("is-expanded"));
     const shouldExpand = !allExpanded;
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
     
     cards.forEach(card => {
         const toggleBtn = card.querySelector(".book-toggle-btn");
@@ -1863,18 +2156,18 @@ function toggleAllBooks() {
         if (shouldExpand) {
             card.classList.add("is-expanded");
             if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "true");
-            if (label) label.textContent = "收合簡介與連結";
+            if (label) label.textContent = isEn ? "Collapse Details" : "收合簡介與連結";
         } else {
             card.classList.remove("is-expanded");
             if (toggleBtn) toggleBtn.setAttribute("aria-expanded", "false");
-            if (label) label.textContent = "簡介與購買連結";
+            if (label) label.textContent = isEn ? "Synopsis & Purchase Links" : "簡介與購買連結";
         }
     });
     
     if (allBtn) {
         allBtn.innerHTML = shouldExpand 
-            ? `<i class="fa-solid fa-angles-up"></i> 全部收合` 
-            : `<i class="fa-solid fa-angles-down"></i> 全部展開`;
+            ? (isEn ? `<i class="fa-solid fa-angles-up"></i> Collapse All` : `<i class="fa-solid fa-angles-up"></i> 全部收合`)
+            : (isEn ? `<i class="fa-solid fa-angles-down"></i> Expand All` : `<i class="fa-solid fa-angles-down"></i> 全部展開`);
         allBtn.setAttribute("aria-expanded", String(shouldExpand));
     }
 }
@@ -1884,9 +2177,10 @@ function updateToggleAllBooksBtn() {
     const allBtn = document.getElementById("toggleAllBooksBtn");
     if (!cards.length || !allBtn) return;
     const allExpanded = Array.from(cards).every(c => c.classList.contains("is-expanded"));
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
     allBtn.innerHTML = allExpanded 
-        ? `<i class="fa-solid fa-angles-up"></i> 全部收合` 
-        : `<i class="fa-solid fa-angles-down"></i> 全部展開`;
+        ? (isEn ? `<i class="fa-solid fa-angles-up"></i> Collapse All` : `<i class="fa-solid fa-angles-up"></i> 全部收合`)
+        : (isEn ? `<i class="fa-solid fa-angles-down"></i> Expand All` : `<i class="fa-solid fa-angles-down"></i> 全部展開`);
     allBtn.setAttribute("aria-expanded", String(allExpanded));
 }
 
@@ -1908,7 +2202,10 @@ function renderLectures() {
 
     // Update count badge
     const badge = document.getElementById("lectureCountBadge");
-    if (badge) badge.textContent = LECTURES_DATABASE.length + " 場";
+    if (badge) {
+        const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
+        badge.textContent = LECTURES_DATABASE.length + (isEn ? " Talks" : " 場");
+    }
 }
 
 function toggleSection(btnId, collapsibleId) {
@@ -2060,7 +2357,10 @@ function renderRaceTable() {
     tableBody.innerHTML = "";
     
     if (filteredRaces.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 30px; color: var(--text-muted);">無符合條件的賽事記錄</td></tr>`;
+        const emptyMsg = (typeof currentLang !== "undefined" && currentLang === "en")
+            ? "No race records found matching criteria"
+            : "無符合條件的賽事記錄";
+        tableBody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 30px; color: var(--text-muted);">${emptyMsg}</td></tr>`;
         return;
     }
     
@@ -2093,11 +2393,15 @@ function renderRacePagination() {
     const totalPages = Math.ceil(filteredRaces.length / racesPerPage);
     if (totalPages <= 1) return;
     
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
+    const prevLabel = isEn ? "Prev" : "上一頁";
+    const nextLabel = isEn ? "Next" : "下一頁";
+    
     const prevBtn = document.createElement("button");
     prevBtn.className = "page-btn";
     prevBtn.innerHTML = '<i class="fa-solid fa-angle-left"></i>';
     prevBtn.disabled = currentRacePage === 1;
-    prevBtn.setAttribute("aria-label", "上一頁");
+    prevBtn.setAttribute("aria-label", prevLabel);
     prevBtn.addEventListener("click", () => {
         if (currentRacePage > 1) {
             currentRacePage--;
@@ -2130,7 +2434,7 @@ function renderRacePagination() {
     nextBtn.className = "page-btn";
     nextBtn.innerHTML = '<i class="fa-solid fa-angle-right"></i>';
     nextBtn.disabled = currentRacePage === totalPages;
-    nextBtn.setAttribute("aria-label", "下一頁");
+    nextBtn.setAttribute("aria-label", nextLabel);
     nextBtn.addEventListener("click", () => {
         if (currentRacePage < totalPages) {
             currentRacePage++;
@@ -2236,49 +2540,58 @@ document.addEventListener("DOMContentLoaded", () => {
 // 15. Employee Badges Management & Modal Flow
 // --------------------------------------------------------------------------
 function renderBadges() {
+    const isEn = (typeof currentLang !== "undefined" && currentLang === "en");
+    const unit = isEn ? "Badges" : "張";
+    const zoomText = isEn ? '<i class="fa-solid fa-magnifying-glass-plus"></i> Click to expand' : '<i class="fa-solid fa-magnifying-glass-plus"></i> 點擊放大';
+    const zoomTitle = isEn ? "Click to view full size" : "點擊放大檢視";
+
     // 1. Update Hero Card Back Stack & Count
     const stackContainer = document.getElementById("badgeAvatarStack");
     if (stackContainer && typeof BADGES_DATABASE !== "undefined") {
-        stackContainer.innerHTML = BADGES_DATABASE.map(b => 
-            `<img src="${b.image}" alt="${b.company}" class="badge-stack-img" title="${b.company} (${b.period})">`
-        ).join("");
+        stackContainer.innerHTML = BADGES_DATABASE.map(b => {
+            const comp = isEn ? (b.companyEn || b.company) : b.company;
+            return `<img src="${b.image}" alt="${comp}" class="badge-stack-img" title="${comp} (${b.period})">`;
+        }).join("");
     }
     const badgeCountText = document.getElementById("badgeCountText");
     if (badgeCountText && typeof BADGES_DATABASE !== "undefined") {
-        badgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-chevron-right"></i>`;
+        badgeCountText.innerHTML = `${BADGES_DATABASE.length} ${unit} <i class="fa-solid fa-chevron-right"></i>`;
     }
 
     // 1b. Update Hero Card Front Stack & Count
     const frontStackContainer = document.getElementById("frontBadgeAvatarStack");
     if (frontStackContainer && typeof BADGES_DATABASE !== "undefined") {
-        frontStackContainer.innerHTML = BADGES_DATABASE.map(b => 
-            `<img src="${b.image}" alt="${b.company}" class="badge-stack-img" title="${b.company} (${b.period})">`
-        ).join("");
+        frontStackContainer.innerHTML = BADGES_DATABASE.map(b => {
+            const comp = isEn ? (b.companyEn || b.company) : b.company;
+            return `<img src="${b.image}" alt="${comp}" class="badge-stack-img" title="${comp} (${b.period})">`;
+        }).join("");
     }
     const frontBadgeCountText = document.getElementById("frontBadgeCountText");
     if (frontBadgeCountText && typeof BADGES_DATABASE !== "undefined") {
-        frontBadgeCountText.innerHTML = `${BADGES_DATABASE.length} 張 <i class="fa-solid fa-expand"></i>`;
+        frontBadgeCountText.innerHTML = `${BADGES_DATABASE.length} ${unit} <i class="fa-solid fa-expand"></i>`;
     }
 
     // 2. Render Modal List
     const modalList = document.getElementById("badgesModalList");
     if (modalList && typeof BADGES_DATABASE !== "undefined") {
-        modalList.innerHTML = BADGES_DATABASE.map(b => `
+        modalList.innerHTML = BADGES_DATABASE.map(b => {
+            const comp = isEn ? (b.companyEn || b.company) : b.company;
+            return `
             <div class="badge-item-card">
-                <div class="badge-img-frame" data-img="${b.image}" data-caption="${b.caption}" title="點擊放大檢視">
-                    <img src="${b.image}" alt="${b.company}" class="badge-modal-img" loading="lazy">
-                    <span class="badge-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> 點擊放大</span>
+                <div class="badge-img-frame" data-img="${b.image}" data-caption="${b.caption}" title="${zoomTitle}">
+                    <img src="${b.image}" alt="${comp}" class="badge-modal-img" loading="lazy">
+                    <span class="badge-zoom-hint">${zoomText}</span>
                 </div>
                 <div class="badge-item-info">
                     <div class="badge-item-header">
-                        <h4 class="badge-item-company">${b.company}</h4>
+                        <h4 class="badge-item-company">${comp}</h4>
                         <span class="badge-item-period">${b.period}</span>
                     </div>
                     <div class="badge-item-title">${b.title}</div>
                     <p class="badge-item-desc">${b.desc || ""}</p>
                 </div>
             </div>
-        `).join("");
+        `}).join("");
 
         // Attach click listeners to badge frames inside modal
         modalList.querySelectorAll(".badge-img-frame").forEach(frame => {

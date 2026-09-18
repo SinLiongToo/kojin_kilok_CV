@@ -5,6 +5,17 @@
 ---
 
 
+## [v1.1.16] - 2026-09-19
+
+### 新增與優化功能
+- **全站中英文雙語無縫切換系統 (Bilingual i18n System)**：
+  - **頂部導航語言切換按鈕 (#langToggle)**：於頂部導航列新增質感圓角切換鈕，支援 `EN` / `中文` 即時切換，並於行動端抽屜式導航與 RWD 佈局中精緻適配。
+  - **完整雙語字典資料庫 (I18N_DICT)**：涵蓋導航、Hero 主視覺、3D 翻轉卡片、三大領域頁籤、跑步統計指標、賽事分類篩選、表格標題、社會實踐、聯絡諮詢、版權宣告與工作識別證彈窗等全站所有介面文字。
+  - **動態渲染函式語系同步**：全面重構 `renderBooks`、`toggleBookCard`、`updateToggleAllBooksBtn`、`renderLectures`、`renderRaceTable`、`renderRacePagination`、`renderBadges`，確保切換語言時所有動態產出之內容即時以對應語系重繪。
+  - **母語原真性維護 (Taiwanese Mother-Tongue Preservation)**：遵循在地文化精神，台語文學作品（詩集、小說、歌詞與引文）之主體內容維持台文/漢羅原始質地展示，主要標題、副標題與互動控制項提供中英對照翻譯。
+  - **狀態記憶與 DOM 屬性標記**：透過 `localStorage` 記憶使用者語系選擇，並動態同步 `<html lang="...">` 與各元素之 `data-i18n`、`data-i18n-html`、`data-i18n-placeholder`、`data-i18n-title` 屬性。
+  - **三大發行版本完整同步**：同步更新 `index.html`、`style.css`、`script.js`、`resume_Masa_standalone.html`（完整保留 22 張 base64 圖檔）與 `resume_Masa_Hsin_Lung_Tu.html`（完整保留 21 張 base64 圖檔）。
+
 ## [v1.1.15] - 2026-09-18
 
 ### 新增與優化功能
