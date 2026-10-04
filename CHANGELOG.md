@@ -5,6 +5,25 @@
 ---
 
 
+## [v1.1.17] - 2026-10-04
+
+### 新增與優化功能
+- **代表性學術論文增加 IEEE 與 Wiley 原文驗證超連結**：
+  - 於「代表性學術論文 (Representative Academic Papers)」章節之 5 篇核心學術論文標題嵌入權威期刊與會議原文直達連結：
+    1. IEEE MWCL (2006): *"High Performance Spiral Inductor on Deep-Trench-Mesh Silicon Substrate"* (`IEEE Xplore: 4020327`)
+    2. MOTL (2007): *"A 30 GHz 10 dB Low Noise Amplifier Using Standard 0.18-μm CMOS Technology"* (`Wiley Online Library: mop.22226`)
+    3. IEEE ISCAS (2006): *"Low-voltage High-linear and Isolation Transformer Based Mixer for Direct Conversion Receiver"* (`IEEE Xplore: 1693444`)
+    4. IEEE APMC (2005): *"Low phase noise VCO design with Symmetrical Inductor in CMOS 0.35-μm Technology"* (`IEEE Xplore: 1606472`)
+    5. IEEE IMTC (2002): *"A windows-based dual-channel arbitrary signal generator"* (`IEEE Xplore: 1007167`)
+  - 每篇論文標題均整合外開圖示 `<i class="fa-solid fa-arrow-up-right-from-square"></i>` 與 `target="_blank" rel="noopener noreferrer"` 安全屬性。
+  - **精緻互動懸停特效 (Hover Micro-interactions)**：為 `.paper-title a` 與圖示新增平滑色彩過渡與右上 2px 浮動微動效，提升閱覽回饋與權威感。
+- **全站最後更新時間戳記同步升級**：
+  - 頂部導航列與頁尾之全站最後更新時間全面推進至 `2026-10-04 11:00`。
+  - 支援中英文雙語字典（`I18N_DICT`）之同步切換。
+- **三大發行版本完整雙向同步**：
+  - 同步更新模組化主版本 `index.html`、樣式表 `style.css`、前端腳本 `script.js`。
+  - 完整同步單檔案離線自包含版 `resume_Masa_standalone.html`（嚴格驗證並完整保留 23 張 base64 嵌入資產）與典藏列印版 `resume_Masa_Hsin_Lung_Tu.html`（完整保留 21 張 base64 嵌入資產）。
+
 ## [v1.1.16] - 2026-09-19
 
 ### 新增與優化功能
