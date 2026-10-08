@@ -2617,6 +2617,47 @@ body.light-theme .timeline-badge-link:hover {
     background: #2563eb;
     color: #ffffff;
 }
+/* --------------------------------------------------------------------------
+   Timeline Video Link Styles
+   -------------------------------------------------------------------------- */
+.timeline-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-left: 6px;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: all var(--transition-fast);
+}
+
+.timeline-video-link:hover {
+    background: #ef4444;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+}
+
+.timeline-video-link i {
+    font-size: 0.82rem;
+}
+
+body.light-theme .timeline-video-link {
+    background: rgba(220, 38, 38, 0.08);
+    border-color: rgba(220, 38, 38, 0.2);
+    color: #dc2626;
+}
+
+body.light-theme .timeline-video-link:hover {
+    background: #dc2626;
+    color: #ffffff;
+}
 
 /* --------------------------------------------------------------------------
    14. Career Badges Modal Gallery Styles

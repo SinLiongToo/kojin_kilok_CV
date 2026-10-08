@@ -894,7 +894,8 @@ const BADGES_DATABASE = [
     title: "RF System Engineer",
     image: "assets/images/badge_foxconn.jpg",
     caption: "Foxconn 鴻海精密工業股份有限公司 | 識別證 (2006 - 2011)",
-    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。"
+    desc: "負責 WiMAX 終端設備與基站模組設計、自動化測試與射頻認證。<span style=\"display: block; margin-top: 6px;\"><a href=\"https://www.youtube.com/watch?v=hIFL5zytaDg\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #ef4444; font-weight: 600; text-decoration: none;\"><i class=\"fa-brands fa-youtube\"></i> 研發產品展示：Motorola WiMAX CPE (SCTE 展會發表影片) <i class=\"fa-solid fa-arrow-up-right-from-square\" style=\"font-size: 0.72rem;\"></i></a></span>",
+    descEn: "Designed and verified indoor/outdoor CPEs and base station modules for WiMAX networks, automated test software, and RF compliance.<span style=\"display: block; margin-top: 6px;\"><a href=\"https://www.youtube.com/watch?v=hIFL5zytaDg\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #ef4444; font-weight: 600; text-decoration: none;\"><i class=\"fa-brands fa-youtube\"></i> Product Demo Video: Motorola WiMAX CPE (SCTE Conference) <i class=\"fa-solid fa-arrow-up-right-from-square\" style=\"font-size: 0.72rem;\"></i></a></span>"
   }
 ];
 
@@ -1595,12 +1596,14 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 06:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 07:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
     "modal_badges_sub": "20+ 年跨國大廠與半導體研發足跡之實體證件存檔",
-    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> 點擊放大"
+    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> 點擊放大",
+    "foxconn_video_btn": "產品展示影片",
+    "foxconn_video_title": "觀看 Motorola WiMAX CPE 產品展示影片 (YouTube)"
   },
   "en": {
     "nav_about": "About",
@@ -1703,12 +1706,14 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 06:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 07:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
     "modal_badges_sub": "Physical badge archive documenting 20+ years of multinational semiconductor R&D journey",
-    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> Click to expand"
+    "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> Click to expand",
+    "foxconn_video_btn": "Demo Video",
+    "foxconn_video_title": "Watch Motorola WiMAX CPE Demo Video (YouTube)"
   }
 };
 
@@ -2594,7 +2599,7 @@ function renderBadges() {
                         <span class="badge-item-period">${b.period}</span>
                     </div>
                     <div class="badge-item-title">${b.title}</div>
-                    <p class="badge-item-desc">${b.desc || ""}</p>
+                    <p class="badge-item-desc">${isEn ? (b.descEn || b.desc || "") : (b.desc || "")}</p>
                 </div>
             </div>
         `}).join("");

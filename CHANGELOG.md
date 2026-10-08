@@ -5,6 +5,20 @@
 ---
 
 
+## [v1.1.19] - 2026-10-09
+
+### 新增與優化功能
+- **Foxconn 鴻海射頻工程經歷整合 Motorola WiMAX CPE 研發產品實物展示影片**：
+  - 於半導體與科技時間軸（Career Timeline）之「RF System Engineer | Foxconn (富士康)」經歷項目整合 SCTE 展會發表之 Motorola WiMAX CPE 研發產品實物展示影片：`https://www.youtube.com/watch?v=hIFL5zytaDg`。
+  - **經歷標題專屬互動按鈕**：於職稱旁新增紅底質感 `.timeline-video-link` 標籤（「<i class="fa-brands fa-youtube"></i> 產品展示影片」），具備浮動投影懸停微動效與中英文雙語適配（`foxconn_video_btn`）。
+  - **中英內文佐證串接**：於中文與英文詳細工作內容末端分別加入點擊直達之產品展示影片超連結與外開圖示。
+  - **實體識別證彈窗雙語同步**：同步於「歷年工作識別證畫廊 (Career Badges Archive)」中的 Foxconn 識別證詳細說明中整合該產品發表影片，並優化 `renderBadges()` 支援 `descEn` 雙語切換。
+- **全站資料最後更新時間戳記同步升級**：
+  - 頂部導航列與頁尾之全站最後更新時間全面同步推進至 `2026-10-09 07:00`。
+- **三大發行版本完整雙向同步**：
+  - 同步更新主動態網站（`index.html`、`style.css`、`script.js`）。
+  - 同步更新單檔案離線自包含版 `resume_Masa_standalone.html`（嚴格驗證並完整保留 23 張 base64 嵌入圖檔）與典藏列印版 `resume_Masa_Hsin_Lung_Tu.html`（完整保留 21 張 base64 嵌入圖檔）。
+
 ## [v1.1.18] - 2026-10-09
 
 ### 新增與優化功能
