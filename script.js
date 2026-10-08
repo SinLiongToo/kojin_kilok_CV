@@ -1597,7 +1597,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 07:25 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 07:55 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -1711,7 +1711,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 07:25 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 07:55 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
