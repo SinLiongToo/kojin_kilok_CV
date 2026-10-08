@@ -5,6 +5,23 @@
 ---
 
 
+## [v1.1.20] - 2026-10-09
+
+### 新增與優化功能
+- **NXP 恩智浦半導體現職職稱精準校正與 77GHz 車用雷達晶片規格 (Datasheet) 權威連結整合**：
+  - **職稱精準校正**：將「Nov 2018 - Present」現任職務職稱由 Advanced Product Engineer 校正為 **Principle Product Engineer**，與實體工作識別證及產業職等完全一致。
+  - **整合 NXP 官方 77GHz 車用雷達晶片規格與手冊連結**：
+    1. **NXP SAF85xx**（77 GHz 車用單晶片雷達 SoC）：`https://www.nxp.com/products/SAF85XX`
+    2. **NXP MR3003**（77 GHz 車用雷達收發器）：`https://www.nxp.com/products/MR3003`
+  - **標題專屬互動規格標籤**：於職稱旁新增藍底質感 `.timeline-datasheet-link` 標籤（「<i class="fa-solid fa-microchip"></i> SAF85xx 規格」與「<i class="fa-solid fa-microchip"></i> MR3003 規格」），具備浮動投影懸停微動效與中英文雙語適配。
+  - **中英內文佐證串接**：於中文與英文詳細工作內容末端分別加入晶片規格與產品手冊之直達超連結與外開圖示。
+  - **實體識別證彈窗雙語同步**：同步於「歷年工作識別證畫廊 (Career Badges Archive)」中的 NXP 識別證詳細說明中整合兩款晶片產品手冊連結，並全面支援 `descEn` 雙語切換。
+- **全站資料最後更新時間戳記同步升級**：
+  - 頂部導航列與頁尾之全站最後更新時間全面同步推進至 `2026-10-09 07:25`。
+- **三大發行版本完整雙向同步**：
+  - 同步更新主動態網站（`index.html`、`style.css`、`script.js`）。
+  - 同步更新單檔案離線自包含版 `resume_Masa_standalone.html`（嚴格驗證並完整保留 23 張 base64 嵌入圖檔）與典藏列印版 `resume_Masa_Hsin_Lung_Tu.html`（完整保留 21 張 base64 嵌入圖檔）。
+
 ## [v1.1.19] - 2026-10-09
 
 ### 新增與優化功能

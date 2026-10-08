@@ -2658,6 +2658,47 @@ body.light-theme .timeline-video-link:hover {
     background: #dc2626;
     color: #ffffff;
 }
+/* --------------------------------------------------------------------------
+   Timeline Datasheet Link Styles
+   -------------------------------------------------------------------------- */
+.timeline-datasheet-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent-tech);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-left: 6px;
+    text-decoration: none;
+    vertical-align: middle;
+    transition: all var(--transition-fast);
+}
+
+.timeline-datasheet-link:hover {
+    background: var(--accent-tech);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+}
+
+.timeline-datasheet-link i {
+    font-size: 0.8rem;
+}
+
+body.light-theme .timeline-datasheet-link {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.2);
+    color: #2563eb;
+}
+
+body.light-theme .timeline-datasheet-link:hover {
+    background: #2563eb;
+    color: #ffffff;
+}
 
 /* --------------------------------------------------------------------------
    14. Career Badges Modal Gallery Styles

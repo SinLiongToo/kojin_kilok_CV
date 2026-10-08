@@ -874,7 +874,8 @@ const BADGES_DATABASE = [
     title: "Principle Product Engineer",
     image: "assets/images/badge_nxp.jpg",
     caption: "NXP Semiconductors 恩智浦半導體 (Kaohsiung) | 識別證 (2012 - Present)",
-    desc: "負責 5G 車用雷達晶片與 77G ADAS 雷達處理器之 NPI 導入、良率優化與全球封測驗證。"
+    desc: "負責 5G 車用雷達晶片與 77G ADAS 雷達處理器之 NPI 導入、良率優化與全球封測驗證。<span style=\"display: block; margin-top: 6px;\"><a href=\"https://www.nxp.com/products/SAF85XX\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--accent-tech); font-weight: 600; text-decoration: none; margin-right: 10px;\"><i class=\"fa-solid fa-microchip\"></i> SAF85xx Radar SoC</a> <a href=\"https://www.nxp.com/products/MR3003\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--accent-tech); font-weight: 600; text-decoration: none;\"><i class=\"fa-solid fa-microchip\"></i> MR3003 Transceiver</a></span>",
+    descEn: "Led NPI introduction, yield optimization, and global OSAT qualification for 5G automotive radar and 77G ADAS radar processors.<span style=\"display: block; margin-top: 6px;\"><a href=\"https://www.nxp.com/products/SAF85XX\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--accent-tech); font-weight: 600; text-decoration: none; margin-right: 10px;\"><i class=\"fa-solid fa-microchip\"></i> SAF85xx Radar SoC</a> <a href=\"https://www.nxp.com/products/MR3003\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--accent-tech); font-weight: 600; text-decoration: none;\"><i class=\"fa-solid fa-microchip\"></i> MR3003 Transceiver</a></span>"
   },
   {
     id: "mstar",
@@ -1596,14 +1597,18 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 07:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 07:25 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
     "modal_badges_sub": "20+ 年跨國大廠與半導體研發足跡之實體證件存檔",
     "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> 點擊放大",
     "foxconn_video_btn": "產品展示影片",
-    "foxconn_video_title": "觀看 Motorola WiMAX CPE 產品展示影片 (YouTube)"
+    "foxconn_video_title": "觀看 Motorola WiMAX CPE 產品展示影片 (YouTube)",
+    "nxp_saf85xx_btn": "SAF85xx 規格",
+    "nxp_mr3003_btn": "MR3003 規格",
+    "nxp_saf85xx_title": "查看 NXP SAF85xx 77GHz 單晶片雷達 SoC 產品規格 (Datasheet)",
+    "nxp_mr3003_title": "查看 NXP MR3003 77GHz 車用雷達收發器產品規格 (Datasheet)"
   },
   "en": {
     "nav_about": "About",
@@ -1706,14 +1711,18 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 07:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 07:25 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
     "modal_badges_sub": "Physical badge archive documenting 20+ years of multinational semiconductor R&D journey",
     "modal_badges_zoom": "<i class=\"fa-solid fa-magnifying-glass-plus\"></i> Click to expand",
     "foxconn_video_btn": "Demo Video",
-    "foxconn_video_title": "Watch Motorola WiMAX CPE Demo Video (YouTube)"
+    "foxconn_video_title": "Watch Motorola WiMAX CPE Demo Video (YouTube)",
+    "nxp_saf85xx_btn": "SAF85xx Datasheet",
+    "nxp_mr3003_btn": "MR3003 Datasheet",
+    "nxp_saf85xx_title": "View NXP SAF85xx 77GHz Radar SoC Datasheet",
+    "nxp_mr3003_title": "View NXP MR3003 77GHz Radar Transceiver Datasheet"
   }
 };
 
