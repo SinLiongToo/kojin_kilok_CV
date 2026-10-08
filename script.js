@@ -1036,7 +1036,9 @@ const BOOKS_DATABASE = [
     "desc": "筆桿不一定能改變世界，但能拒絕向謊言低頭。<br><br>面對公共議題，知識份子沒有置身事外的權利；思辨不是炫耀聰明，而是承擔社會責任。",
     "target": "適合所有關心台灣未來、願意獨立思考、不甘於人云亦云的讀者閱讀。無論你的職業、年齡或政治立場為何，只要你相信民主需要公民參與，文化需要世代傳承，國家需要人民守護，這本書都是為你而寫。",
     "paperLinks": {},
-    "ebookLinks": {}
+    "ebookLinks": {
+      "讀墨": "https://readmoo.com/book/210504058000101"
+    }
   },
   {
     "title": "雜雜唸",
@@ -1593,7 +1595,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-04 11:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-09 06:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -1701,7 +1703,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-04 11:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-09 06:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
@@ -2084,7 +2086,7 @@ function renderBooks() {
                     ebookLinksHtml += `<a href="${link}" target="_blank" class="book-link">${platform}</a>`;
                 }
             }
-            paperLinksHtml += `</div>`;
+            ebookLinksHtml += `</div>`;
         }
         
         bookCard.innerHTML = `
