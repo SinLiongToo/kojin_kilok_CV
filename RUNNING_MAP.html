@@ -371,18 +371,18 @@ let tracks = [];
 let colorIdx = 0;
 let searchQuery = '';
 
-// ── 地圖圖層定義 ───────────────────────────────────────────
-const darkTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+// ── 地圖圖層定義 (完全免 API Key、無浮水印) ────────────────
+const darkTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: '&copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin', maxNativeZoom: 16, maxZoom: 19
 });
-const lightTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '© OSM © CARTO', subdomains: 'abcd', maxZoom: 19
+const lightTile = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 19
 });
 const taiwanTopo = L.tileLayer('https://wmts.nlsc.gov.tw/wmts/EMAP/default/GoogleMapsCompatible/{z}/{y}/{x}', {
-  attribution: '© 國土測繪圖資服務雲', maxZoom: 19
+  attribution: '&copy; <a href="https://maps.nlsc.gov.tw/">內政部國土測繪中心</a>', maxZoom: 19
 });
 const taiwanSat = L.tileLayer('https://wmts.nlsc.gov.tw/wmts/PHOTO2/default/GoogleMapsCompatible/{z}/{y}/{x}', {
-  attribution: '© 國土測繪圖資服務雲', maxZoom: 19
+  attribution: '&copy; <a href="https://maps.nlsc.gov.tw/">內政部國土測繪中心</a>', maxZoom: 19
 });
 
 const baseMaps = {
