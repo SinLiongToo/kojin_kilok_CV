@@ -572,12 +572,22 @@ function filterTracks() {
 
 function zoomTo(id) {
   const t = tracks.find(item => item.id === id);
-  if (t && t.bounds) {
+  if (t && t.bounds && t.bounds.isValid && t.bounds.isValid()) {
     map.fitBounds(t.bounds, { padding: [40, 40], maxZoom: 15 });
     // Highlight track card
     document.querySelectorAll('.track-card').forEach(el => el.classList.remove('active'));
     const card = document.querySelector(`.track-card[data-id="${id}"]`);
     if (card) card.classList.add('active');
+
+    // Open popup on the track
+    if (t.layers && t.layers[0] && typeof t.layers[0].openPopup === 'function') {
+      t.layers[0].openPopup();
+    }
+
+    // On mobile, collapse bottom sheet to peek so the track is clearly visible
+    if (typeof setState === 'function' && window.innerWidth < 768) {
+      setState('peek');
+    }
   }
 }
 
@@ -604,11 +614,15 @@ function removeTrack(id) {
 }
 
 function fitAll() {
-  const vis = tracks.filter(t => t.bounds && t.visible);
+  const vis = tracks.filter(t => t.bounds && t.visible && t.bounds.isValid && t.bounds.isValid());
   if (!vis.length) return;
-  let totalBounds = vis[0].bounds;
-  vis.forEach(t => { totalBounds = totalBounds.extend(t.bounds); });
-  map.fitBounds(totalBounds, { padding: [30, 30] });
+  const totalBounds = L.latLngBounds();
+  vis.forEach(t => {
+    totalBounds.extend(t.bounds);
+  });
+  if (totalBounds.isValid()) {
+    map.fitBounds(totalBounds, { padding: [30, 30] });
+  }
 }
 
 // ── 動態匯入新 GPX 檔案處理 ───────────────────────────────
