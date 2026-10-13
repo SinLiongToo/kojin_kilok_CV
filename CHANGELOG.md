@@ -11,10 +11,12 @@
 - **全站資料最後更新時間戳記與發行版本雙向同步推進 (Last Updated Timestamp Sync)**：
   - 頂部導航列與頁尾之全站最後更新時間全面同步推進至 `2026-10-13 15:43`。
   - 資源快取版本號全面更新為 `v1.1.22`。
+- **工程應用程式與技術專業標題名稱升級 (Professional Engineering Domain Title Update)**：
+  - 將技術專案與自研 WebApps 區塊標題由原本的 `Engineering | Lean Expert | Black Belt | Data Science` 全面升級為 **`Semiconductor | Engineering | Lean Expert | Black Belt | Data Science | AI/ML`**，精準涵蓋半導體工程、精實專案與人工智慧機器學習等全維度專長。
 - **三大發行版本完整雙向同步與資產完整性驗證**：
-  - 主動態網站（`index.html`、`script.js`）全面同步導航列、頁尾與 i18n 字典（`I18N_DICT.zh` 與 `I18N_DICT.en`）。
-  - 單檔案離線自包含版 `resume_Masa_standalone.html` 同步導航列、頁尾與中英雙語字典，嚴格驗證並完整保留 23 張 base64 嵌入圖檔。
-  - 典藏列印版 `resume_Masa_Hsin_Lung_Tu.html` 同步導航列、頁尾與中英雙語字典，嚴格驗證並完整保留 21 張 base64 嵌入圖檔。
+  - 主動態網站（`index.html`、`script.js`）全面同步導航列、頁尾與 i18n 字典（`I18N_DICT.zh` 與 `I18N_DICT.en`），並更新工程應用程式區塊標題。
+  - 單檔案離線自包含版 `resume_Masa_standalone.html` 同步導航列、頁尾、雙語字典與工程標題，嚴格驗證並完整保留 23 張 base64 嵌入圖檔。
+  - 典藏列印版 `resume_Masa_Hsin_Lung_Tu.html` 同步導航列、頁尾、雙語字典與工程標題，嚴格驗證並完整保留 21 張 base64 嵌入圖檔。
 
 ## [v1.1.21] - 2026-10-09
 
