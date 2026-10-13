@@ -885,7 +885,8 @@ const BADGES_DATABASE = [
     title: "RF Senior Engineer",
     image: "assets/images/badge_mstar.jpg",
     caption: "MStar Semiconductor 晨星半導體 | 識別證 (2011 - 2012)",
-    desc: "負責藍牙晶片系統級測試、設計驗證、失效分析與頻段共存排查。"
+    desc: "負責藍牙晶片系統級測試、設計驗證、失效分析與頻段共存排查。",
+    descEn: "Led Bluetooth transceiver system-level verification, design validation, failure analysis, and cellular/Bluetooth radio co-existence debugging."
   },
   {
     id: "foxconn",

@@ -21,6 +21,9 @@
   - 主動態網站（`index.html`）引入 `assets/images/project6.png` 圖檔。
   - 單檔案離線自包含版 `resume_Masa_standalone.html` 同步新增該專案卡片，嚴格驗證並完整內嵌第 24 張 Base64 圖檔（現共 24 筆 Base64 資產）。
   - 典藏列印版 `resume_Masa_Hsin_Lung_Tu.html` 同步新增該專案卡片，嚴格驗證並完整內嵌第 22 張 Base64 圖檔（現共 22 筆 Base64 資產）。
+- **職涯識別證彈窗（Career Badges Archive）MStar 晨星半導體英文語系精確補齊 (i18n Fix)**：
+  - 修正點擊「職涯識別證 (Career Badges)」於英文語系模式下，晨星半導體（MStar Semiconductor）卡片說明未顯示英文的問題。
+  - 補齊並同步 `descEn: "Led Bluetooth transceiver system-level verification, design validation, failure analysis, and cellular/Bluetooth radio co-existence debugging."` 至 `script.js`、`resume_Masa_standalone.html` 與 `resume_Masa_Hsin_Lung_Tu.html`。
 
 ## [v1.1.21] - 2026-10-09
 
