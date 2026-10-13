@@ -13,10 +13,14 @@
   - 資源快取版本號全面更新為 `v1.1.22`。
 - **工程應用程式與技術專業標題名稱升級 (Professional Engineering Domain Title Update)**：
   - 將技術專案與自研 WebApps 區塊標題由原本的 `Engineering | Lean Expert | Black Belt | Data Science` 全面升級為 **`Semiconductor | Engineering | Lean Expert | Black Belt | Data Science | AI/ML`**，精準涵蓋半導體工程、精實專案與人工智慧機器學習等全維度專長。
+- **新增 AI 財報與營運戰略對標分析儀表板專案展示 (AI Financial & OpEx Strategic Dashboard)**：
+  - 於「半導體與科技 (Tech)」之「Semiconductor | Engineering | Lean Expert | Black Belt | Data Science | AI/ML」自研 WebApps 專案輪播首位新增專案卡片。
+  - **展示核心優勢與領域知識結合**：說明結合財務 Domain Knowledge 與現代 LLM 工具鏈，將企業原生 10-K / 20-F PDF 財報自動轉為結構化 Markdown，並透過 LLM 提取財務核心指標進行 Gross Margin vs. Operating Margin 二維矩陣對標與營運生產力洞察。
+  - **提供線上 Live Demo 直達按鈕**：串接官方 GitHub Pages 展示網站 `https://sinliongtoo.github.io/financialreport_comparsion/`。
 - **三大發行版本完整雙向同步與資產完整性驗證**：
-  - 主動態網站（`index.html`、`script.js`）全面同步導航列、頁尾與 i18n 字典（`I18N_DICT.zh` 與 `I18N_DICT.en`），並更新工程應用程式區塊標題。
-  - 單檔案離線自包含版 `resume_Masa_standalone.html` 同步導航列、頁尾、雙語字典與工程標題，嚴格驗證並完整保留 23 張 base64 嵌入圖檔。
-  - 典藏列印版 `resume_Masa_Hsin_Lung_Tu.html` 同步導航列、頁尾、雙語字典與工程標題，嚴格驗證並完整保留 21 張 base64 嵌入圖檔。
+  - 主動態網站（`index.html`）引入 `assets/images/project6.png` 圖檔。
+  - 單檔案離線自包含版 `resume_Masa_standalone.html` 同步新增該專案卡片，嚴格驗證並完整內嵌第 24 張 Base64 圖檔（現共 24 筆 Base64 資產）。
+  - 典藏列印版 `resume_Masa_Hsin_Lung_Tu.html` 同步新增該專案卡片，嚴格驗證並完整內嵌第 22 張 Base64 圖檔（現共 22 筆 Base64 資產）。
 
 ## [v1.1.21] - 2026-10-09
 
