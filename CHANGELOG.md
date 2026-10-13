@@ -4,6 +4,18 @@
 
 ---
 
+## [v1.1.24] - 2026-10-13
+
+### 新增與優化功能
+- **升級 STDF Sanity Checker 專案卡片與實機介面展示 (STDF Sanity Checker Project Update)**：
+  - 更新自研半導體資料工程工具「STDF Sanity Checker：測試程式改版的自動化驗證工具」專案卡片與最新架構實機截圖 (`assets/images/project3.png`)。
+  - **核心分析能力與工程領域知識整合**：突顯直接讀取 STDF（支援 10 GB 級大檔），一次性執行八項核心分析：測項與 limit 比對、Bin switch 晶圓圖、Delta Sigma 分布比較、ECID 重複性與趨勢、規格重算與良率影響、Site / Zonal 空間分析、交叉表，以及 AEC-Q001 PAT 異常晶粒篩選。
+  - **精確可靠驗證與審查匯出**：所有計算均與原始演算法逐位元比對驗證，支援一鍵匯出 CSV 與 PPT 供技術審查，在改版階段攔截問題並杜絕產線重工。
+  - **提供完整中英文雙語內容**：對齊嚴謹工程用語與流暢繁中說明。
+- **三大發行版本完整雙向同步與 Base64 資產零損毀驗證 (Multi-Representation Sync & Asset Integrity)**：
+  - 同步更新 `index.html`、`resume_Masa_standalone.html` 與 `resume_Masa_Hsin_Lung_Tu.html`。
+  - 嚴格驗證 Base64 圖檔資產完整性，維持 `resume_Masa_standalone.html`（24 筆 Base64 資產）與 `resume_Masa_Hsin_Lung_Tu.html`（22 筆 Base64 資產）無損替換。
+
 ## [v1.1.23] - 2026-10-13
 
 ### 新增與優化功能
