@@ -4,6 +4,17 @@
 
 ---
 
+## [v1.1.23] - 2026-10-13
+
+### 新增與優化功能
+- **半導體與科技 (Tech) 主區塊標題全面升級 (Tech Section Header Enhancement)**：
+  - 將 `#tech` 主標題 `<h2>` 由原本的 `Semiconductor & RF Engineering & Data Science` 升級為 **`Semiconductor & RF Engineering & Data Science & Automation (AI/ML) & Lean Six sigma`**。
+  - 精確涵蓋自動化 (Automation)、人工智慧/機器學習 (AI/ML) 與精實六標準差 (Lean Six Sigma) 等全方位工程專業領域。
+- **全站資料最後更新時間戳記與國際化雙向同步推進 (Last Updated Timestamp & i18n Sync)**：
+  - 頂部導航列與頁尾之全站最後更新時間全面同步推進至 `2026-10-13 19:40`。
+  - 同步雙語字典（`I18N_DICT`）之 `footer_sub` 與 `nav_updated_title`。
+- **三大發行版本完整雙向同步與 Base64 資產零損毀驗證 (Multi-Representation Sync & Asset Integrity)**：
+  - 嚴格同步 `index.html`、`script.js`、`resume_Masa_standalone.html`（完整保留 24 筆 Base64 圖檔）與典藏列印版 `resume_Masa_Hsin_Lung_Tu.html`（完整保留 22 筆 Base64 圖檔）。
 
 ## [v1.1.22] - 2026-10-13
 
