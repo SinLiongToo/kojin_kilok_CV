@@ -4,6 +4,20 @@
 
 ---
 
+## [v1.1.25] - 2026-10-19
+
+### 新增與優化功能
+- **社會責任與公益捐血里程碑推進 (Blood Donation Milestone Update - 102+ Times)**：
+  - 更新首頁個人名片翻面數據膠囊「102+ 次熱血捐血 (102+ Blood Donations)」。
+  - 同步更新「社會責任與多維認證」專屬卡片內容至「熱血捐血 102+ 次」與「累計完成超過 102 次的無償捐血」，以實際行動實踐對生命的長期守護與社會責任。
+  - 雙語字典（`I18N_DICT`）之繁中與英文版本全數精準對齊。
+- **全站最後更新時間戳記與資源快取版本同步推進 (Last Updated Timestamp & Cache Version Bump)**：
+  - 頂部導航列與頁尾之全站最後更新時間全面同步推進至 `2026-10-19 10:00`。
+  - 外部資源快取版本號同步升級至 `v1.1.25`（`style.css?v=1.1.25`、`script.js?v=1.1.25`）。
+- **三大發行版本完整雙向同步與 Base64 資產零損毀驗證 (Multi-Representation Sync & Asset Integrity)**：
+  - 嚴格同步三大版本：動態模組版 `index.html`（含 `script.js`）、單檔案自包含版 `resume_Masa_standalone.html` 與典藏列印版 `resume_Masa_Hsin_Lung_Tu.html`。
+  - 嚴格驗證 Base64 圖檔資產完整性，維持 `resume_Masa_standalone.html`（24 筆 Base64 資產）與 `resume_Masa_Hsin_Lung_Tu.html`（22 筆 Base64 資產）無損替換。
+
 ## [v1.1.24] - 2026-10-13
 
 ### 新增與優化功能

@@ -1522,7 +1522,7 @@ const I18N_DICT = {
     "card_stat_books": "出版著作 (本)",
     "card_stat_races": "完成賽事 (場)",
     "card_achieve_lit": "<i class=\"fa-solid fa-award\"></i> 金典獎台語創作首獎",
-    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 100+ 次熱血捐血",
+    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 102+ 次熱血捐血",
     "card_achieve_emt": "<i class=\"fa-solid fa-kit-medical\"></i> EMT-1 救護技術員",
     "card_back_hint": "<i class=\"fa-solid fa-rotate\"></i> 點擊翻回正面",
 
@@ -1598,7 +1598,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-13 19:40 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-19 10:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -1636,7 +1636,7 @@ const I18N_DICT = {
     "card_stat_books": "Published Books",
     "card_stat_races": "Races Completed",
     "card_achieve_lit": "<i class=\"fa-solid fa-award\"></i> Taiwan Literature Award Winner",
-    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 100+ Blood Donations",
+    "card_achieve_blood": "<i class=\"fa-solid fa-heart-pulse\"></i> 102+ Blood Donations",
     "card_achieve_emt": "<i class=\"fa-solid fa-kit-medical\"></i> Certified EMT-1",
     "card_back_hint": "<i class=\"fa-solid fa-rotate\"></i> Click to flip back",
 
@@ -1712,7 +1712,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-13 19:40 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-19 10:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
