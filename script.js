@@ -5,6 +5,14 @@
 // --- Database Definitions ---
 const RACES_DATABASE = [
   {
+    "id": 86,
+    "name": "2026 第三屆赤兔馬全國馬拉松",
+    "date": "2026/10/25",
+    "time": "04:53:42",
+    "category": "full",
+    "categoryDisplay": "全馬"
+  },
+  {
     "id": 85,
     "name": "2026 府城100公里超級馬拉松 09/13 5:30起跑",
     "date": "2026/9/13",
@@ -1509,7 +1517,7 @@ const I18N_DICT = {
 
     "hero_title": "探索極限的<br><span class=\"text-gradient\">跨界鏈結者</span>",
     "hero_subtitle": "Masa Hsin-Lung Tu 杜信龍",
-    "hero_desc": "在<strong>半導體</strong>的微米世界裡，我是擁有 20 餘年經驗的射頻工程與 NPI 專家，用數據與六標準差追尋完美的晶片良率；<br>在<strong>台語文學</strong>的瀚海星空中，我是獲臺灣文學金典獎首獎的作家，用母語的字句雕琢土地的溫度與歷史；<br>在<strong>極限越野與超馬</strong>的泥濘山路中，我是用雙腳完成了 85 場賽事的行者，在無盡的呼吸與心跳中體會生命的純粹。",
+    "hero_desc": "在<strong>半導體</strong>的微米世界裡，我是擁有 20 餘年經驗的射頻工程與 NPI 專家，用數據與六標準差追尋完美的晶片良率；<br>在<strong>台語文學</strong>的瀚海星空中，我是獲臺灣文學金典獎首獎的作家，用母語的字句雕琢土地的溫度與歷史；<br>在<strong>極限越野與超馬</strong>的泥濘山路中，我是用雙腳完成了 86 場賽事的行者，在無盡的呼吸與心跳中體會生命的純粹。",
     "hero_btn_contact": "與我聯絡 <i class=\"fa-solid fa-arrow-right\"></i>",
     "hero_btn_experience": "瀏覽專業經歷",
 
@@ -1555,7 +1563,7 @@ const I18N_DICT = {
 
     // Running & Trail Tab
     "run_header_title": "極限超馬越野與登山足跡",
-    "run_header_desc": "雙腳是我的畫筆，大地是我的畫布。累計已完成了 85 場長距離馬拉松，包含 11 場超馬與險峻的百公里高難度越野挑戰，從路跑的節律中淬煉出人生的專注與毅力。",
+    "run_header_desc": "雙腳是我的畫筆，大地是我的畫布。累計已完成了 86 場長距離馬拉松，包含 11 場超馬與險峻的百公里高難度越野挑戰，從路跑的節律中淬煉出人生的專注與毅力。",
     "run_stat_races": "已完賽場次",
     "run_stat_ultra": "超極馬拉松 / 越野挑戰",
     "run_stat_half": "半程馬拉松",
@@ -1568,7 +1576,7 @@ const I18N_DICT = {
     "run_map_baiyue_intro": "在投入越野跑與超馬之前，我自 2010 年至 2016 年間深入台灣高山，完成了 35 座台灣百岳的攀登與帶團足跡。下方地圖記錄了這些年來的山行歲月：",
     "run_map_track_title": "<i class=\"fa-solid fa-person-running\"></i> 台灣跑步足跡地圖 ( 2024-0227~now)",
     "run_map_track_intro": "記錄自 2024 年 2 月至今的所有公路路跑、馬拉松、越野超馬與戶外訓練足跡（已自動排除室內自行車與跑步機）。支援即時互動縮放、搜尋、多圖層切換與隨時匯入新 GPX 檔案：",
-    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 85 場馬拉松賽事全紀錄",
+    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 86 場馬拉松賽事全紀錄",
     "run_ledger_intro": "歡迎使用下方搜尋與過濾器，查詢我自 2012 年起走過的所有馬拉松與越野跑足跡。",
     "run_search_placeholder": "輸入賽事名稱或年份 (例如：太魯閣、2024)...",
     "run_filter_all": "所有類型",
@@ -1598,7 +1606,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-19 10:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-10-25 17:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -1623,7 +1631,7 @@ const I18N_DICT = {
 
     "hero_title": "Exploring Limits<br><span class=\"text-gradient\">Cross-Domain Boundary Crosser</span>",
     "hero_subtitle": "Masa Hsin-Lung Tu",
-    "hero_desc": "In the micro-world of <strong>semiconductors</strong>, I am an RF and NPI specialist with 20+ years of experience, pursuing chip yield perfection through data and Six Sigma;<br>In the boundless cosmos of <strong>Taiwanese literature</strong>, I am a Taiwan Literature Award-winning author, sculpting the history and warmth of our land through mother-tongue prose;<br>On the muddy trails of <strong>extreme ultra-marathons</strong>, I am an endurance athlete having completed 85 races, embracing life's purity with every breath and heartbeat.",
+    "hero_desc": "In the micro-world of <strong>semiconductors</strong>, I am an RF and NPI specialist with 20+ years of experience, pursuing chip yield perfection through data and Six Sigma;<br>In the boundless cosmos of <strong>Taiwanese literature</strong>, I am a Taiwan Literature Award-winning author, sculpting the history and warmth of our land through mother-tongue prose;<br>On the muddy trails of <strong>extreme ultra-marathons</strong>, I am an endurance athlete having completed 86 races, embracing life's purity with every breath and heartbeat.",
     "hero_btn_contact": "Get in Touch <i class=\"fa-solid fa-arrow-right\"></i>",
     "hero_btn_experience": "Explore Experience",
 
@@ -1669,7 +1677,7 @@ const I18N_DICT = {
 
     // Running & Trail Tab
     "run_header_title": "Extreme Ultra Trail, Marathon & Mountaineering",
-    "run_header_desc": "Feet are my brushes, the earth is my canvas. Having completed 85 long-distance marathons, including 11 ultra-marathons and grueling 100K mountain trail challenges, distilling focus and perseverance through running rhythms.",
+    "run_header_desc": "Feet are my brushes, the earth is my canvas. Having completed 86 long-distance marathons, including 11 ultra-marathons and grueling 100K mountain trail challenges, distilling focus and perseverance through running rhythms.",
     "run_stat_races": "Races Completed",
     "run_stat_ultra": "Ultra Marathons & Trails",
     "run_stat_half": "Half Marathons",
@@ -1682,7 +1690,7 @@ const I18N_DICT = {
     "run_map_baiyue_intro": "Prior to ultra running, I explored Taiwan's high peaks between 2010 and 2016, summiting 35 Baiyue mountains and leading alpine expeditions. The map below records these mountaineering years:",
     "run_map_track_title": "<i class=\"fa-solid fa-person-running\"></i> Taiwan Running Tracks Map (2024 - Present)",
     "run_map_track_intro": "Recording all road runs, marathons, trail ultras, and outdoor workouts from February 2024 to present (indoor cycling/treadmills excluded). Supports interactive zoom, search, layer toggling, and new GPX imports:",
-    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 85 Marathons & Ultras Complete Ledger",
+    "run_ledger_title": "<i class=\"fa-solid fa-table-list\"></i> 86 Marathons & Ultras Complete Ledger",
     "run_ledger_intro": "Use the search box and filter below to query all marathon and trail races completed since 2012.",
     "run_search_placeholder": "Search race name or year (e.g., Taroko, 2024)...",
     "run_filter_all": "All Categories",
@@ -1712,7 +1720,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-19 10:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-10-25 17:00 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
