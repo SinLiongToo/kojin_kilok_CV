@@ -4,6 +4,25 @@
 
 ---
 
+## [v1.1.27] - 2026-11-24
+
+### 新增與優化功能
+- **第 87 場馬拉松/超馬越野完賽紀錄登錄 (87th Marathon & 12th Ultra Milestone - 2026 第十屆 FORMOSA TRAIL 75K)**：
+  - 成功完成第 87 場賽事、第 12 場超級馬拉松/越野挑戰：**2026 第十屆 FORMOSA TRAIL**（75K 越野組，實際跑步距離約 83.99 km，完賽時間 `15:33:19`，地點：南投縣埔里鎮）。
+  - 全站同步更新馬拉松完賽總數至 **87 場**、超馬/越野挑戰更新至 **12 場**（包含 53 場全馬、12 場超馬/越野挑戰、19 場半馬、1 場其他賽事）。
+  - 更新 `5. marathon.txt` 賽事紀錄資料庫與個人履歷名片完成賽事徽章。
+- **全新 GPX 跑步軌跡資料集擴充 (GPX Running Track trk_100 Integration - 100 Tracks Milestone)**：
+  - 自 `GARMIN_CONNET_TRACK/marathon_gpx/2026-11-21_埔里鎮_越野跑.gpx` 提取並解析高精度 GPS 軌跡（56,037 點）。
+  - 經 RDP 幾何平滑與抽樣優化（500 點，總里程 83.99 km，爬升 881 m），新增軌跡代號 `trk_100`（2026-11-21 第十屆FORMOSA TRAIL (75K) 埔里鎮）。
+  - 同步更新 `running_tracks_data.json` 與 `running_tracks_data.js`，預載軌跡總數正式跨越 **100 筆真實足跡大關**。
+- **全站雙語 (i18n) 辭典與最後更新時間同步 (Bilingual i18n & Cache Bump)**：
+  - 更新 `I18N_DICT` 中英文版本之 Hero 簡介、Running 標題引言、賽事清單總表標題與超馬場次統計。
+  - 提升資產快取版本至 `v1.1.27`（`style.css?v=1.1.27`、`script.js?v=1.1.27`）。
+  - 更新全站導航欄與頁尾之最後更新時間為 `2026-11-24 06:30`。
+- **三大發行版本雙向同步與 Base64 資產完整性防護 (Multi-Representation Sync & Asset Integrity)**：
+  - 嚴格同步三大端：動態模組化 `index.html`（含 `script.js`）、單檔案自包含版 `resume_Masa_standalone.html` 與列印/典藏版 `resume_Masa_Hsin_Lung_Tu.html`。
+  - 嚴格維持 Base64 圖檔資產完整性，維持 `resume_Masa_standalone.html`（24 處 Base64 資產）與 `resume_Masa_Hsin_Lung_Tu.html`（22 處 Base64 資產）無損無溢漏。
+
 ## [v1.1.26] - 2026-10-25
 
 ### 新增與優化功能
