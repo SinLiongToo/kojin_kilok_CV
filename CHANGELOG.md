@@ -4,6 +4,22 @@
 
 ---
 
+## [v1.1.28] - 2026-11-27
+
+### 新增與優化功能
+- **Semiconductor Test Analytics 影片展示整合 (Video Hub & Interactive Demos Integration)**：
+  - 在 `#tech` 科技專案區上方新增 **Semiconductor Test Analytics Video Hub** 精選展示橫幅，直通完整展示站台（`https://sinliongtoo.github.io/semiconductor-test-analytics-videos/`）。
+  - **STDF Sanity Checker (Card 5)** 新增「🎬 Video Demo (6:31)」直達按鈕，快速預覽完整規格檢查、邊界值防禦與測試時長分析之影片展示。
+  - **ECID Spatial Outlier Detection System (Card 6)** 新增「🎬 Video Demo (3:43)」直達按鈕，直達晶圓空間異常離群檢測與良率追溯之影片展示。
+  - **MIT Professional Education 專業證書卡片** 新增「Verified Certificate & Videos」鏈結，一鍵檢視 MIT No Code AI & Machine Learning 專業認證與影片專區。
+- **全站雙語 (i18n) 辭典與最後更新時間同步 (Bilingual i18n & Cache Bump)**：
+  - 更新 `I18N_DICT` 中英文版本之 Video Hub 橫幅標題、副標題、按鈕文字與卡片直達標籤。
+  - 提升資產快取版本至 `v1.1.28`（`style.css?v=1.1.28`、`script.js?v=1.1.28`）。
+  - 更新全站導航欄與頁尾之最後更新時間為 `2026-11-27 14:45`。
+- **三大發行版本雙向同步與 Base64 資產完整性防護 (Multi-Representation Sync & Asset Integrity)**：
+  - 嚴格同步三大端：動態模組化 `index.html`（含 `script.js`）、單檔案自包含版 `resume_Masa_standalone.html` 與列印/典藏版 `resume_Masa_Hsin_Lung_Tu.html`。
+  - 嚴格維持 Base64 圖檔資產完整性，`resume_Masa_standalone.html`（24 處 Base64 資產）與 `resume_Masa_Hsin_Lung_Tu.html`（22 處 Base64 資產）無損無溢漏。
+
 ## [v1.1.27] - 2026-11-24
 
 ### 新增與優化功能

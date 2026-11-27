@@ -2876,6 +2876,30 @@ body.light-theme .badge-item-period {
 }
 }
 
+
+/* --------------------------------------------------------------------------
+   Semiconductor Test Analytics Video Hub Banner
+   -------------------------------------------------------------------------- */
+.tech-video-banner {
+    transition: all var(--transition-normal);
+}
+
+.tech-video-banner:hover {
+    border-color: rgba(64, 196, 255, 0.6) !important;
+    box-shadow: 0 6px 24px rgba(64, 196, 255, 0.15) !important;
+}
+
+body.light-theme .tech-video-banner {
+    background: linear-gradient(135deg, rgba(241, 245, 249, 0.95) 0%, rgba(226, 232, 240, 0.9) 100%) !important;
+    border-color: rgba(37, 99, 235, 0.3) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.light-theme .tech-video-banner:hover {
+    border-color: rgba(37, 99, 235, 0.5) !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12) !important;
+}
+
 </style>
 </head>
 <body class="dark-theme">
@@ -2896,7 +2920,7 @@ body.light-theme .badge-item-period {
             
             <div class="nav-actions">
                 <span class="nav-last-updated" title="資料最後更新時間" data-i18n-title="nav_updated_title">
-                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-11-24 06:30
+                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-tech);"></i> 2026-11-27 14:45
                 </span>
                 <button id="langToggle" class="lang-toggle-btn" aria-label="切換語言 / Switch Language" title="切換語言 / Switch Language">
                     <i class="fa-solid fa-globe"></i>
@@ -3101,6 +3125,40 @@ body.light-theme .badge-item-period {
                     <h3 class="sub-section-title"><i class="fa-solid fa-laptop-code"></i> Semiconductor | Engineering | Lean Expert | Black Belt | Data Science | AI/ML</h3>
                     <p class="sub-section-intro" style="margin-bottom: 8px;">Combining engineering rigor with web development to build lightweight, local-first web applications that eliminate daily engineering bottlenecks in data analysis, verification, and project tracking.</p>
                     <p class="text-muted" style="font-size: 0.92rem; font-style: italic; margin-bottom: 36px;">將寫作的邏輯與工程師的嚴謹結合，為解決產線與 NPI 常見的低效操作，親自開發了多款高效網頁應用程式 (WebApps)。</p>
+
+                    <!-- Semiconductor Test Analytics Video Showcase Banner -->
+                    <div class="tech-video-banner" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.9) 100%); border: 1px solid rgba(64, 196, 255, 0.35); border-radius: var(--border-radius-md); padding: 22px 24px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden;">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 8px; background: rgba(64, 196, 255, 0.15); color: #40c4ff; font-size: 1.15rem;"><i class="fa-solid fa-film"></i></span>
+                                <div>
+                                    <h4 style="margin: 0; font-size: 1.15rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;" data-i18n="tech_video_hub_title">
+                                        Semiconductor Test Analytics Video Hub
+                                        <span class="version-tag" style="background: rgba(64, 196, 255, 0.2); color: #40c4ff; border-color: rgba(64, 196, 255, 0.4);">MIT PE 2026</span>
+                                    </h4>
+                                    <p style="margin: 2px 0 0 0; font-size: 0.82rem; color: var(--accent-tech);" data-i18n="tech_video_hub_subtitle">Two tools, one goal: find what changed, and why.</p>
+                                </div>
+                            </div>
+                            <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 6px 14px; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; border-radius: var(--border-radius-sm); font-weight: 600;" data-i18n-title="tech_video_portal_title">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> <span data-i18n="tech_video_portal_btn">線上影音專區 (Video Portal)</span>
+                            </a>
+                        </div>
+                        <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;" data-i18n="tech_video_hub_desc">
+                            專為半導體測試工程與客退根因分析打造的兩大分析工具實機操作影片：涵蓋 STDF 測試程式改版自動化 OLD vs NEW 驗證（8-in-1 核心比對），以及針對客退晶粒的單顆晶粒（Single-Die）跨批次 16 億點座標與 ML 空間異常分析。
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+                            <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#sanity-checker" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="padding: 6px 12px; font-size: 0.82rem;" data-i18n-title="tech_video_sanity_title">
+                                <i class="fa-solid fa-circle-play" style="color: var(--accent-lit);"></i> <span data-i18n="tech_video_sanity_btn">STDF Sanity Checker 影片導覽 (6:31)</span>
+                            </a>
+                            <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#ecid-outlier-analyzer" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="padding: 6px 12px; font-size: 0.82rem;" data-i18n-title="tech_video_ecid_title">
+                                <i class="fa-solid fa-circle-play" style="color: var(--accent-lit);"></i> <span data-i18n="tech_video_ecid_btn">ECID Outlier Analyzer 影片導覽 (3:43)</span>
+                            </a>
+                            <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#certification" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="padding: 6px 12px; font-size: 0.82rem;" data-i18n-title="tech_video_mit_title">
+                                <i class="fa-solid fa-certificate"></i> <span data-i18n="tech_video_mit_btn">MIT PE 專業認證證書 (PDF)</span>
+                            </a>
+                        </div>
+                    </div>
+
                     
                                         <div class="projects-slider-wrapper">
                         <button class="slider-btn prev-btn" id="prevProjectBtn" aria-label="Previous Project"><i class="fa-solid fa-chevron-left"></i></button>
@@ -3154,7 +3212,7 @@ body.light-theme .badge-item-period {
                             </div>
                             <div class="project-body">
                                 <span class="project-tag">Test Engineering / Yield Automation &amp; QA</span>
-                                <h4>STDF Sanity Checker</h4>
+                                <h4>STDF Sanity Checker <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#sanity-checker" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="font-size: 0.78rem; padding: 2px 8px; vertical-align: middle; margin-left: 6px;" title="觀看 STDF Sanity Checker 產品影片展示 (6:31)" data-i18n-title="tech_video_sanity_title"><i class="fa-solid fa-circle-play" style="color: var(--accent-lit);"></i> <span data-i18n="tech_video_sanity_btn">Video Demo (6:31)</span></a></h4>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
                                     <p style="font-weight: 500; color: var(--text-primary);">An automated verification platform designed for semiconductor test program releases. Directly parses STDF files (including 10 GB-class datasets) and performs eight core analyses in one place: test item and limit comparison, bin-switch wafer maps, Delta Sigma distribution comparison, ECID repeatability and trends, limit re-binning with yield impact, site/zonal spatial analysis, cross tables, and AEC-Q001 PAT maverick screening. Results export directly to CSV and PowerPoint for technical review, with all calculations verified bit-for-bit against original algorithms to catch issues before release and eliminate costly rework.</p>
                                     <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 8px;">??擃葫閰衣?撘???芸???霅極?瑯??葫閰血極蝔?domain knowledge ???????嚗?亥???STDF嚗 10 GB 蝝之瑼?嚗?甈∪???敹???皜祇???limit 瘥??in switch ?嗅??elta Sigma ??瘥??CID ???扯?頞典???潮?蝞??舐?敶梢?ite / Zonal 蝛粹????漱?”嚗誑??AEC-Q001 PAT ?啣虜?嗥?蝭拚??港??萄??CSV ??PPT 靘?銵祟?伐????蝞???憪?蝞?????撠?霅??冽??畾萄?????蝯蝺?撌乓?/p>
@@ -3168,7 +3226,7 @@ body.light-theme .badge-item-period {
                             </div>
                             <div class="project-body">
                                 <span class="project-tag">Machine Learning / Big Data</span>
-                                <h4>ECID Spatial Outlier Detection System</h4>
+                                <h4>ECID Spatial Outlier Detection System <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#ecid-outlier-analyzer" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="font-size: 0.78rem; padding: 2px 8px; vertical-align: middle; margin-left: 6px;" title="觀看 ECID Outlier Analyzer 產品影片展示 (3:43)" data-i18n-title="tech_video_ecid_title"><i class="fa-solid fa-circle-play" style="color: var(--accent-lit);"></i> <span data-i18n="tech_video_ecid_btn">Video Demo (3:43)</span></a></h4>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
                                     <p style="font-weight: 500; color: var(--text-primary);">A spatial-aware ML anomaly detector targeting maverick dies and edge defects. Utilizes Polars lazy evaluation and Parquet storage for sub-second ECID querying of 1.6 billion points. Combines Univariate (3-Sigma), Bivariate Regression (6-Sigma), NNR (Nearest Neighbor Residual) with PCA and TensorFlow Autoencoders.</p>
                                     <p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic; border-top: 1px solid var(--border-color); padding-top: 8px;">以 Python + ML 開發的先進晶片異常檢測系統。運用 Polars 與 Parquet 於毫秒內查詢與分析數十億點晶圓座標；結合 3-Sigma、雙變量回歸與空間鄰近殘差 (NNR) 演算法，配合 PCA 與 TensorFlow 自動編碼器，捕獲潛藏的 Maverick 晶粒。</p>
@@ -3285,7 +3343,7 @@ body.light-theme .badge-item-period {
                         <!-- MIT Certification -->
                         <div class="education-card" style="background-color: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); padding: 22px; border-left: 3px solid var(--accent-tech); display: flex; flex-direction: column;">
                             <div style="font-size: 0.8rem; font-weight: 700; color: var(--accent-tech); margin-bottom: 6px;">May 2026</div>
-                            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">No Code AI & Machine Learning</h4>
+                            <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;">No Code AI & Machine Learning <a href="https://sinliongtoo.github.io/semiconductor-test-analytics-videos/#certification" target="_blank" rel="noopener noreferrer" class="timeline-datasheet-link" style="font-size: 0.78rem; padding: 2px 8px; vertical-align: middle; margin-left: 6px;" title="查看 MIT 專業認證證書與實作專案" data-i18n-title="tech_video_mit_title"><i class="fa-solid fa-certificate"></i> <span data-i18n="tech_video_mit_btn">Verified Certificate &amp; Videos</span></a></h4>
                             <p style="font-size: 0.9rem; color: var(--text-primary); font-weight: 500; margin-bottom: 4px;">Massachusetts Institute of Technology (MIT), USA</p>
                             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 16px;">Professional certification in data science solutions and machine learning implementations. (數據科學與機器學習專業證書)</p>
                             <a href="https://www.credential.net/1beeaa99-c1f6-44f2-8812-691d06e9d05d" target="_blank" class="btn btn-mini" style="margin-top: auto; display: inline-flex; justify-content: center; align-self: flex-start;"><i class="fa-solid fa-certificate"></i> View Credential (檢視證書)</a>
@@ -3764,7 +3822,7 @@ body.light-theme .badge-item-period {
     <footer class="footer">
         <div class="container">
             <p data-i18n-html="footer_rights">&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. </p>
-            <p class="footer-sub" data-i18n-html="footer_sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-24 06:30 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
+            <p class="footer-sub" data-i18n-html="footer_sub">跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-27 14:45 | Designed with <i class="fa-solid fa-heart text-gradient"></i></p>
         </div>
     </footer>
 
@@ -5292,7 +5350,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-24 06:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-27 14:45 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -5303,7 +5361,20 @@ const I18N_DICT = {
     "nxp_saf85xx_btn": "SAF85xx 規格",
     "nxp_mr3003_btn": "MR3003 規格",
     "nxp_saf85xx_title": "查看 NXP SAF85xx 77GHz 單晶片雷達 SoC 產品規格 (Datasheet)",
-    "nxp_mr3003_title": "查看 NXP MR3003 77GHz 車用雷達收發器產品規格 (Datasheet)"
+    "nxp_mr3003_title": "查看 NXP MR3003 77GHz 車用雷達收發器產品規格 (Datasheet)",
+
+        // Semiconductor Test Analytics Video Hub
+        "tech_video_hub_title": "半導體測試數據分析與驗證工具影音導覽",
+        "tech_video_hub_subtitle": "兩大分析工具，同一個核心目標：找出變更了什麼、以及為什麼 (Find what changed, and why)",
+        "tech_video_portal_btn": "線上影音專區 (Video Portal)",
+        "tech_video_portal_title": "前往 Semiconductor Test Analytics Videos 影音專區",
+        "tech_video_hub_desc": "專為半導體測試工程與客退根因分析打造的兩大分析工具實機操作影片：涵蓋 STDF 測試程式改版自動化 OLD vs NEW 驗證（8-in-1 核心比對），以及針對客退晶粒的單顆晶粒（Single-Die）跨批次 16 億點座標與 ML 空間異常分析。",
+        "tech_video_sanity_btn": "STDF Sanity Checker 影片導覽 (6:31)",
+        "tech_video_sanity_title": "觀看 STDF Sanity Checker 產品影片展示 (6:31)",
+        "tech_video_ecid_btn": "ECID Outlier Analyzer 影片導覽 (3:43)",
+        "tech_video_ecid_title": "觀看 ECID Outlier Analyzer 產品影片展示 (3:43)",
+        "tech_video_mit_btn": "MIT PE 專業認證證書 (PDF)",
+        "tech_video_mit_title": "查看 MIT Professional Education 專業認證證書與專案成果"
   },
   "en": {
     "nav_about": "About",
@@ -5406,7 +5477,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-11-24 06:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-11-27 14:45 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
@@ -5417,7 +5488,20 @@ const I18N_DICT = {
     "nxp_saf85xx_btn": "SAF85xx Datasheet",
     "nxp_mr3003_btn": "MR3003 Datasheet",
     "nxp_saf85xx_title": "View NXP SAF85xx 77GHz Radar SoC Datasheet",
-    "nxp_mr3003_title": "View NXP MR3003 77GHz Radar Transceiver Datasheet"
+    "nxp_mr3003_title": "View NXP MR3003 77GHz Radar Transceiver Datasheet",
+
+        // Semiconductor Test Analytics Video Hub
+        "tech_video_hub_title": "Semiconductor Test Analytics Video Hub",
+        "tech_video_hub_subtitle": "Two tools, one goal: find what changed, and why.",
+        "tech_video_portal_btn": "Watch on Video Portal",
+        "tech_video_portal_title": "Go to Semiconductor Test Analytics Videos Portal",
+        "tech_video_hub_desc": "Product walkthroughs of two desktop tools for semiconductor test data: automated OLD vs NEW verification of STDF data (8-in-1 core analyses), and single-die root-cause analytics across multi-lot wafer runs (1.6B points & ML spatial outlier models).",
+        "tech_video_sanity_btn": "STDF Sanity Checker Walkthrough (6:31)",
+        "tech_video_sanity_title": "Watch STDF Sanity Checker Product Walkthrough (6:31)",
+        "tech_video_ecid_btn": "ECID Outlier Analyzer Walkthrough (3:43)",
+        "tech_video_ecid_title": "Watch ECID Outlier Analyzer Product Walkthrough (3:43)",
+        "tech_video_mit_btn": "MIT PE Verified Certificate (PDF)",
+        "tech_video_mit_title": "View MIT Professional Education Verified Certificate & Project Showcase"
   }
 };
 

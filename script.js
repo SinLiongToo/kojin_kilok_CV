@@ -1614,7 +1614,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu (杜信龍). All Rights Reserved. ",
-    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-24 06:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "跨越晶片與文字的邊界，持續奔跑。 | 最後更新時間：2026-11-27 14:45 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> 歷年工作識別證 (Career Badges)",
@@ -1625,7 +1625,20 @@ const I18N_DICT = {
     "nxp_saf85xx_btn": "SAF85xx 規格",
     "nxp_mr3003_btn": "MR3003 規格",
     "nxp_saf85xx_title": "查看 NXP SAF85xx 77GHz 單晶片雷達 SoC 產品規格 (Datasheet)",
-    "nxp_mr3003_title": "查看 NXP MR3003 77GHz 車用雷達收發器產品規格 (Datasheet)"
+    "nxp_mr3003_title": "查看 NXP MR3003 77GHz 車用雷達收發器產品規格 (Datasheet)",
+
+        // Semiconductor Test Analytics Video Hub
+        "tech_video_hub_title": "半導體測試數據分析與驗證工具影音導覽",
+        "tech_video_hub_subtitle": "兩大分析工具，同一個核心目標：找出變更了什麼、以及為什麼 (Find what changed, and why)",
+        "tech_video_portal_btn": "線上影音專區 (Video Portal)",
+        "tech_video_portal_title": "前往 Semiconductor Test Analytics Videos 影音專區",
+        "tech_video_hub_desc": "專為半導體測試工程與客退根因分析打造的兩大分析工具實機操作影片：涵蓋 STDF 測試程式改版自動化 OLD vs NEW 驗證（8-in-1 核心比對），以及針對客退晶粒的單顆晶粒（Single-Die）跨批次 16 億點座標與 ML 空間異常分析。",
+        "tech_video_sanity_btn": "STDF Sanity Checker 影片導覽 (6:31)",
+        "tech_video_sanity_title": "觀看 STDF Sanity Checker 產品影片展示 (6:31)",
+        "tech_video_ecid_btn": "ECID Outlier Analyzer 影片導覽 (3:43)",
+        "tech_video_ecid_title": "觀看 ECID Outlier Analyzer 產品影片展示 (3:43)",
+        "tech_video_mit_btn": "MIT PE 專業認證證書 (PDF)",
+        "tech_video_mit_title": "查看 MIT Professional Education 專業認證證書與專案成果"
   },
   "en": {
     "nav_about": "About",
@@ -1728,7 +1741,7 @@ const I18N_DICT = {
 
     // Footer
     "footer_rights": "&copy; 2026 Masa Hsin-Lung Tu. All Rights Reserved. ",
-    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-11-24 06:30 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
+    "footer_sub": "Bridging chips and words, continuously running. | Last Updated: 2026-11-27 14:45 | Designed with <i class=\"fa-solid fa-heart text-gradient\"></i>",
 
     // Modal
     "modal_badges_title": "<i class=\"fa-solid fa-id-badge text-gradient\"></i> Career Badges Archive",
@@ -1739,7 +1752,20 @@ const I18N_DICT = {
     "nxp_saf85xx_btn": "SAF85xx Datasheet",
     "nxp_mr3003_btn": "MR3003 Datasheet",
     "nxp_saf85xx_title": "View NXP SAF85xx 77GHz Radar SoC Datasheet",
-    "nxp_mr3003_title": "View NXP MR3003 77GHz Radar Transceiver Datasheet"
+    "nxp_mr3003_title": "View NXP MR3003 77GHz Radar Transceiver Datasheet",
+
+        // Semiconductor Test Analytics Video Hub
+        "tech_video_hub_title": "Semiconductor Test Analytics Video Hub",
+        "tech_video_hub_subtitle": "Two tools, one goal: find what changed, and why.",
+        "tech_video_portal_btn": "Watch on Video Portal",
+        "tech_video_portal_title": "Go to Semiconductor Test Analytics Videos Portal",
+        "tech_video_hub_desc": "Product walkthroughs of two desktop tools for semiconductor test data: automated OLD vs NEW verification of STDF data (8-in-1 core analyses), and single-die root-cause analytics across multi-lot wafer runs (1.6B points & ML spatial outlier models).",
+        "tech_video_sanity_btn": "STDF Sanity Checker Walkthrough (6:31)",
+        "tech_video_sanity_title": "Watch STDF Sanity Checker Product Walkthrough (6:31)",
+        "tech_video_ecid_btn": "ECID Outlier Analyzer Walkthrough (3:43)",
+        "tech_video_ecid_title": "Watch ECID Outlier Analyzer Product Walkthrough (3:43)",
+        "tech_video_mit_btn": "MIT PE Verified Certificate (PDF)",
+        "tech_video_mit_title": "View MIT Professional Education Verified Certificate & Project Showcase"
   }
 };
 
